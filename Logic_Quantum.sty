@@ -39,41 +39,25 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric}
 
-\DeclareMathOperator{\Av}{Av }
-\DeclareMathOperator{\Mod}{Mod}
-\DeclareMathOperator{\Th}{Th}
-\DeclareMathOperator{\tp}{tp}
-\DeclareMathOperator{\sub}{sub}
-\DeclareMathOperator{\dom}{dom}
+% ═══════════════════════════════════════════════════════════════════════════
+%% Vendored shared packages  (pristine copies in _packages/; DO NOT edit there)
+% ═══════════════════════════════════════════════════════════════════════════
+%%% Vendored: eduenez/LaTeX-shared-files/di-alphabets.sty @ ab85c0f
+\usepackage{di-alphabets}        % \RR \fA \fM \scrA ... (one macro per symbol)
+%%% Vendored: eduenez/LaTeX-shared-files/di-logic.sty @ 50494b7
+\usepackage{di-logic}            % \Mod \Th \tp \Aut \Av \dom \sub \aore  (this paper does not load di-structures)
+%%% Vendored: eduenez/LaTeX-shared-files/di-cleveref.sty @ b997f82
+\usepackage{di-cleveref}         % \cref names (Theorem, Section, ...), loaded after hyperref and BEFORE the theorem environments
 
-\renewcommand{\phi}{\varphi}
-\renewcommand{\epsilon}{\varepsilon}
+% ═══════════════════════════════════════════════════════════════════════════
+%% Project-specific additions  (EDIT HERE)
+% ═══════════════════════════════════════════════════════════════════════════
 
-\newcommand{\FA}{\mathfrak{A}}
-\newcommand{\FB}{\mathfrak{B}}
-\newcommand{\FK}{\mathfrak{K}}
-\newcommand{\FM}{\mathfrak{M}}
-\newcommand{\FN}{\mathfrak{N}}
-\newcommand{\FQ}{\mathfrak{Q}}
-
-\newcommand{\SA}{\mathscr{A}}
-\newcommand{\SB}{\mathscr{B}}
-\newcommand{\SF}{\mathscr{F}}
-\newcommand{\SG}{\mathscr{G}}
-\newcommand{\SL}{\mathscr{L}}
-\newcommand{\SN}{\mathscr{N}}
-\newcommand{\SP}{\mathscr{P}}
-\newcommand{\SU}{\mathscr{U}}
-\newcommand{\SV}{\mathscr{V}}
-
-\newcommand{\BR}{\mathbb{R}}
-
+% ─── Document-specific macros and colours ───────────────────────────────────
 \newcommand{\com}{\mathrel{\venus}}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
   \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 \newcommand{\circone}{\circled{$\mathbb{1}$}}
-
-\newcommand{\aore}{\forall \vee \exists}
 
 \colorlet{LightPurple}{White!80!Periwinkle}
 \colorlet{LightPink}{White!80!Lavender}
@@ -83,17 +67,6 @@
 \colorlet{LightYellow}{White!80!Goldenrod}
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
-
-
-% ═══════════════════════════════════════════════════════════════════════════
-%% Vendored shared packages  (pristine copies in _packages/; DO NOT edit there)
-% ═══════════════════════════════════════════════════════════════════════════
-%%% Vendored: eduenez/LaTeX-shared-files/di-cleveref.sty @ b997f82
-\usepackage{di-cleveref}         % \cref names (Theorem, Section, ...), loaded after hyperref and BEFORE the theorem environments
-
-% ═══════════════════════════════════════════════════════════════════════════
-%% Project-specific additions  (EDIT HERE)
-% ═══════════════════════════════════════════════════════════════════════════
 
 % ─── Theorem environments (thmtools; numberlike=theorem shares the counter through aliascnt) ───
 \declaretheoremstyle[name=Theorem,]{thmsty}
