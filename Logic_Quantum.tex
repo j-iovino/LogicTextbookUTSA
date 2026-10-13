@@ -143,7 +143,7 @@ As an example, a vector space requires two sorts:
 a sort for vectors and a sort for scalars.
 The scalar multiplication operation takes in a scalar and a vector as input and produces a vector as output.
 This simple example illustrates the fact that, for multisorted structures, each of the operations and predicates of a given structure must equipped not only with an arity, but also a specified sort for each of its variables.
-In Definition~\ref{def:structure}, for generality, we could have included a definition of structure that includes multisorted structures.
+In \cref{def:structure}, for generality, we could have included a definition of structure that includes multisorted structures.
 However, since the specification of a sort for each variable of each function or relation of a structure,
 as well as each constant of the structure,  often makes the notation cumbersome, we restrict our attention almost exclusively to one-sorted structures, i.e., structures with a single sort (called the \emph{domain} or \emph{universe} of the structure).
 It should be clear how our results extend to multisorted contexts.
@@ -156,7 +156,7 @@ It should be clear how our results extend to multisorted contexts.
 \subsection{Syntax: Vocabularies, terms, formulas, and sentences}
 
 In this section, we introduce the basic definitions of \emph{language} and \emph{theory} that are standard in logic and that will be used throughout the notes.
-Readers familiar with these notions may skip this section and jump directly to Section~\ref{sec:topology}.
+Readers familiar with these notions may skip this section and jump directly to \cref{sec:topology}.
 
 \begin{definition}
   A \emph{vocabulary}
@@ -250,7 +250,7 @@ When a formal variable symbol $x$ is under the scope of a quantifier in a formul
 \begin{definition}
   \label{def:tautology}
   A first-order formula $V$-formula $\varphi$ is called a \emph{tautology} if it can be obtained from a propositional tautology
-  $\psi\in L_\mathscr{S}$ (see Definition~\ref{def:propositional-tautology}), where $\mathscr{S}$ is a set of sentence symbols, by simultaneously and uniformly substituting the sentence symbols in $\mathscr{S}$ for the prime formulas of $L_V$.
+  $\psi\in L_\mathscr{S}$ (see \cref{def:propositional-tautology}), where $\mathscr{S}$ is a set of sentence symbols, by simultaneously and uniformly substituting the sentence symbols in $\mathscr{S}$ for the prime formulas of $L_V$.
 \end{definition}
 
 We emphasize terms and formulas are merely symbolic expressions.
@@ -477,7 +477,7 @@ The reader should note that Property iii) and the next proposition are equivalen
   Note that $C$ is closed if for every $x\in X$, if every basic neighborhood of $x$ intersects $C$, then $x\in C$.
 \end{definition}
 
-Note that, by Proposition~\ref{prop:basic-nhoods-are-open}, a subset of $X$ is open if and only it is a union of basic neighborhoods.
+Note that, by \cref{prop:basic-nhoods-are-open}, a subset of $X$ is open if and only it is a union of basic neighborhoods.
 
 \begin{proposition}
   \label{prop:properties-of-open-sets}
@@ -510,12 +510,12 @@ Note that, by Proposition~\ref{prop:basic-nhoods-are-open}, a subset of $X$ is o
 
   \item
     If $O_1$ and $O_2$ are open subsets of $X$, then for each $x\in O_1\cap O_2$, there are $U,V\in \mathscr{N}_x$ such that $U\subseteq O_1$ and $V\subseteq O_2$.
-    By Property ii) of Definition~\ref{def:topological-space}, there’s
+    By Property ii) of \cref{def:topological-space}, there’s
     $W_x\in \mathscr{N}_x$ such that \[W_x\subseteq U\cap V\subseteq O_1\cap O_2\text{.}\] Thus, $O_1\cap O_2$ is the union of all such $W_x\in \mathscr{N}_x$ that satisfy $W_x\subseteq O_1\cap O_2$ as $x$ ranges over $O_1\cap O_2$.
   \end{enumerate}
 \end{proof}
 
-Note that an infinite intersection of open sets is not necessarily open, as will be shown in Example \ref{exa:basic-topological-spaces}(a).
+Note that an infinite intersection of open sets is not necessarily open, as will be shown in \cref{exa:basic-topological-spaces}(a).
 
 \begin{definition}
   Let $(X, \mathscr{N}_x)_{x\in X}$ be a topological space.
@@ -580,7 +580,7 @@ For instance, examples (a) and (b) below generate the same topology on $\RR$.
     \]
     Then, for each $\mathfrak{M}\in X$, let $\mathscr{N}_\mathfrak{M} = \{ \Mod (\varphi): \mathfrak{M}\models \varphi \}$.
 
-    We will show that $(X,\mathscr{N}_\mathfrak{M})_{\mathfrak{M}\in X}$ satisfies the three properties of a topological space given in Definition~\ref{def:topological-space}.
+    We will show that $(X,\mathscr{N}_\mathfrak{M})_{\mathfrak{M}\in X}$ satisfies the three properties of a topological space given in \cref{def:topological-space}.
 
     \begin{proof} Fix a structure $\mathfrak{M}\in X$.
 
@@ -622,7 +622,7 @@ For instance, examples (a) and (b) below generate the same topology on $\RR$.
       \mathscr{N}_a = \left\{ V_a(P_1,\dots, P_n,\varepsilon) \colon \varepsilon >0, P_1,\dots,P_n\in\mathscr{P}, n\in\NN \right\}\text{.}
     \]
 
-    We will show that $(M,\mathscr{N}_a)_{a\in M}$ satisfies the three properties of a topological space given in Definition~\ref{def:topological-space}.
+    We will show that $(M,\mathscr{N}_a)_{a\in M}$ satisfies the three properties of a topological space given in \cref{def:topological-space}.
 
     \begin{proof} Fix an element $a\in M$.
 
@@ -687,7 +687,7 @@ For instance, examples (a) and (b) below generate the same topology on $\RR$.
     P_i\in\mathscr{P}, V_{i}\in\mathscr{N}_{P_i(a)} \text{ for $i\in\{1,\dots,n\}$}, n\in\NN \right\}\text{.}
     \end{multline*}
 
-    An argument similar to that given in the previous example shows that $(M,\mathscr{N}_a)_{a\in M}$ satisfies the three properties of a topological space given in Definition~\ref{def:topological-space}.
+    An argument similar to that given in the previous example shows that $(M,\mathscr{N}_a)_{a\in M}$ satisfies the three properties of a topological space given in \cref{def:topological-space}.
 
   \item
     \label{item:product-topology}
@@ -786,7 +786,7 @@ We are now ready to define the notion of convergence.
 \end{definition}
 
 In the context of a sequence of real numbers, this is the definition we are familiar with.
-Consider Example \ref{exa:basic-topological-spaces}(a);
+Consider \cref{exa:basic-topological-spaces}(a);
 namely, the topological space $(\RR,\mathscr{N}_x)_{x\in \RR}$ where $\mathscr{N}_x = \{(x-\varepsilon,x+\varepsilon) \colon \varepsilon>0\}$.
 Let $I=\NN$, and let $\mathscr{F}$ consist of all cofinite subsets of $\NN$.
 Then, if $(a_n)_{n\in \NN}$ is a sequence of real numbers, we see that $a_n \overset{\mathscr{F}}\to c$ if and only if for every $V_c\in\mathscr{N}_c$, we have $a_n\in V_c$ for all but finitely many $n\in\NN$;
@@ -798,7 +798,7 @@ that is, for all $\varepsilon >0$, there exists  $N\in\NN$ such that for all $n>
 
 Recall that, in the topological space $(\RR,\mathscr{N}_x)_{x\in \RR}$ mentioned above, limits are unique.
 However, this is not true in every topological space.
-Consider the indiscrete topology discussed in Example~\ref{exa:basic-topological-spaces}(e);
+Consider the indiscrete topology discussed in \cref{exa:basic-topological-spaces}(e);
 namely, given any set $X$, the indiscrete topology on $X$ is the set $\mathscr{T}=\{\emptyset, X\}$.
 Given any indexed family $(a_i)_{i\in I}$ in $X$ and any filter
 $\mathscr{F}$ on $I$, since $X$ is the only basic neighborhood of any point in $X$ and \[\{i\colon a_i\in X\}=I\in\mathscr{F}\text{,}\] it follows that every point in $X$ is a limit of $(a_i)_{i\in I}$.
@@ -831,12 +831,12 @@ This question leads us to the following definition.
   A & =\{i \colon a_i\in U\}\in\mathscr{F} \text{ and} \\
   B & =\{i \colon a_i\in V\}\in\mathscr{F}\text{,}
   \end{align*}
-  so by Property iii) of Definition~\ref{def:filter}, we have $A\cap B=\emptyset\in \mathscr{F}$, which contradicts Property i).
+  so by Property iii) of \cref{def:filter}, we have $A\cap B=\emptyset\in \mathscr{F}$, which contradicts Property i).
   We conclude $c=d$.
 \end{proof}
 
-The converse of Proposition~\ref{prop:hausdorff-implies-unique-limits} is also true.
-Although it is not needed for the material in these notes, it can be proved easily, so we have included a proof in Proposition~\ref{prop:unique-limits-implies-hausdorff}
+The converse of \cref{prop:hausdorff-implies-unique-limits} is also true.
+Although it is not needed for the material in these notes, it can be proved easily, so we have included a proof in \cref{prop:unique-limits-implies-hausdorff}
 
 \begin{notation}
   In case $\mathscr{F}$-limits are unique in a topological space $(X,\mathscr{N}_x)_{x\in X}$ and an indexed family $(a_i)_{i\in I}$ in $X$ converges to $c\in X$, we write
@@ -875,7 +875,7 @@ $I$ that are neither $\mathscr{F}$-large nor $\mathscr{F}$-small
 The preceding example suggests that ultrafilters represent an abstract notion of “point".
 Principal ultrafilters are “hard" points, while nonprincipal ultrafilters are “soft" points.
 In model theory, one sees points as “packets” of information.
-The information carried by a point (with respect to a given theory $T$ of a vocabulary $V$) is called the \emph{type} of the point relative to $T$ (see Definition~\ref{def:type}).
+The information carried by a point (with respect to a given theory $T$ of a vocabulary $V$) is called the \emph{type} of the point relative to $T$ (see \cref{def:type}).
 The information carried by types increases as the vocabulary $V$ is expanded to larger vocabularies;
 see example~\ref{exa:nonstandard-arithmetic}.
 The compactness theorem (see Theorem~\ref{thm:compactness} and Corollaries~\ref{cor:compactness-from-completeness-1}, and~\ref{cor:compactness-from-completeness-2}) states that spaces of types are topologically compact, i.e., closed under topological limits.
@@ -914,7 +914,7 @@ The preceding proposition can be re-stated as follows:
 
 In light of the preceding proposition, to prove that nonprincipal ultrafilters exist, we only have to prove that the Fréchet filter on $I$ can be extended to an ultrafilter.
 The following propositions show that, indeed,  any collection of subsets of $I$ that has the finite intersection property can be extended to an ultrafilter;
-see, in particular, Corollaries~\ref{cor:ultrafilter-theorem} and~\ref{cor:nonprincipal-ultrafilters-exist}.
+see, in particular, \cref{cor:ultrafilter-theorem,cor:nonprincipal-ultrafilters-exist}.
 
 \begin{definition}
   \label{def:fip}
@@ -943,9 +943,9 @@ Mathematicians often refer to it as “f.i.p."
 \end{proof}
 
 Due to the preceding proposition, any collection $\mathscr{B}$ of subsets of $I$ with the finite intersection property is often called a \emph{base} for a filter (or a \emph{filter base}) on $I$.
-The filter $\mathscr{F}$ constructed in the proof of the Proposition~\ref{prop:filter-generated-by-a-base} is called the filter \emph{generated} by $\mathscr{B}$.
+The filter $\mathscr{F}$ constructed in the proof of the \cref{prop:filter-generated-by-a-base} is called the filter \emph{generated} by $\mathscr{B}$.
 
-Now we want to improve Proposition~\ref{prop:filter-generated-by-a-base} by showing that every filter can be extended to an ultrafilter on $I$.
+Now we want to improve \cref{prop:filter-generated-by-a-base} by showing that every filter can be extended to an ultrafilter on $I$.
 
 \begin{proposition}
   \label{prop:ultrafilter-lemma}
@@ -955,7 +955,7 @@ Now we want to improve Proposition~\ref{prop:filter-generated-by-a-base} by show
 
 \begin{proof}
   Fix a set $A\subseteq I$.
-  By Proposition~\ref{prop:filter-generated-by-a-base}, it suffices to verify that either $\mathscr{F}\cup\{A\}$ or $\mathscr{F}\cup\{I\setminus A\}$ has the finite intersection property.
+  By \cref{prop:filter-generated-by-a-base}, it suffices to verify that either $\mathscr{F}\cup\{A\}$ or $\mathscr{F}\cup\{I\setminus A\}$ has the finite intersection property.
   But this is immediate because if $\mathscr{F}\cup\{A\}$ fails to have the finite intersection property, it is because there exist $A_1,\dots, A_n\in \mathscr{F}$ such that
   $A_1 \cap\dots \cap A_n\cap A=\emptyset$, and this means that
   $I\setminus A\supseteq A_1 \cap\dots \cap A_n$,
@@ -992,7 +992,7 @@ Now we want to improve Proposition~\ref{prop:filter-generated-by-a-base} by show
   The construction is as follows.
   Fix $\xi<\alpha$ and that $\scrF_\zeta$ has been defined for all $\zeta<\xi$.
 
-  If $\xi$ is a successor ordinal, say $\xi=\zeta+1$, by Proposition~\ref{prop:ultrafilter-lemma},
+  If $\xi$ is a successor ordinal, say $\xi=\zeta+1$, by \cref{prop:ultrafilter-lemma},
   either $\scrF_\zeta \cup \{A_\zeta\}$ or $\scrF_\zeta \cup \{I\setminus A_\zeta\}$ has the finite intersection property (it is possible that both sets have the f.i.p.).
   We pick one of these sets that has the finite intersection property, and let $\scrF_\xi$ be an filter extending it.
 
@@ -1011,8 +1011,8 @@ Now we want to improve Proposition~\ref{prop:filter-generated-by-a-base} by show
 
 \begin{proof}
   Let $I$ be an infinite set.
-  By Proposition \ref{prop:ultrafilter-lemma}, the Fréchet filter on $I$ can be extended to an ultrafilter.
-  By Proposition~\ref{prop:nonprincipality-and-frechet}, such an ultrafilter must be nonprincipal.
+  By \cref{prop:ultrafilter-lemma}, the Fréchet filter on $I$ can be extended to an ultrafilter.
+  By \cref{prop:nonprincipality-and-frechet}, such an ultrafilter must be nonprincipal.
 \end{proof}
 
 \begin{corollary}
@@ -1022,12 +1022,12 @@ Now we want to improve Proposition~\ref{prop:filter-generated-by-a-base} by show
 \end{corollary}
 
 \begin{proof}
-  By Proposition~\ref{prop:filter-generated-by-a-base} and Corollary~\ref{cor:ultrafilter-theorem}.
+  By \cref{prop:filter-generated-by-a-base} and \cref{cor:ultrafilter-theorem}.
 \end{proof}
 
 \subsection{Topological compactness and concluding topological remarks}
 
-Let us prove that the converse of Proposition~\ref{prop:hausdorff-implies-unique-limits} holds:
+Let us prove that the converse of \cref{prop:hausdorff-implies-unique-limits} holds:
 
 \begin{proposition}
   \label{prop:unique-limits-implies-hausdorff}
@@ -1055,7 +1055,7 @@ Note that the index set in the statement of the preceding proposition is the spa
   Then, all basic neighborhoods of $c$ and $d$ are $\mathscr{F}$-large, so if we take the identity family $(x)_{x\in X}$, we have $x\overset{\mathscr{F}}\to c$ and $x\overset{\mathscr{F}}\to d$.
 \end{proof}
 
-Note that, by the Ultrafilter Theorem (Corollary ~\ref{cor:ultrafilter-theorem}), the filter $\mathscr{F}$ given by the preceding proposition can be taken to be an ultrafilter.
+Note that, by the Ultrafilter Theorem (\cref{cor:ultrafilter-theorem}), the filter $\mathscr{F}$ given by the preceding proposition can be taken to be an ultrafilter.
 
 \begin{definition}
   \label{def:compactness}
@@ -1115,7 +1115,7 @@ but this is impossible because, by the definition of $\mathscr{U}$, the set $O_i
   It is easy to see that the real number $c=\sum_{n\in\NN}d_n2^{-n}\in[0,1]$ has the property that every open neighborhood of $c$ contains a $\mathscr{U}$-large set of $a_i$s.
 \end{proof}
 
-The following theorem refers to the product of a family of topological spaces defined in Example~\ref{exa:logic-topological-spaces}-\ref{item:product-topology}.
+The following theorem refers to the product of a family of topological spaces defined in \cref{exa:logic-topological-spaces}-\ref{item:product-topology}.
 It is one of the most famous theorems in general topology.
 
 \begin{theorem}[Tychonoff’s Theorem, 1930]
@@ -1131,7 +1131,7 @@ It is one of the most famous theorems in general topology.
   Fix an indexed family  $(a_i)_{i\in I }\in \prod_{P\in\scrP}X^{(P)}$ and an ultrafilter  $\scrU$ on $I$ to prove that $(a_i)_{i\in I }$ has a $\scrU$-limit in $\prod_{P\in\scrP}X^{(P)}$.
   For each $i\in I$, let $a_i= (a_i^{(P)})_{P\in\scrP}$.
   Since each factor $X^{(P)}$ is compact,  for each $P\in \scrP$ we fix $c^{(P)}\in X^{(P)}$ such that $a_i^{(P)}\overset{\mathscr{U}}\to c^{(P)}$.
-  But then, by the very way the product topology is defined (see  Example~\ref{exa:logic-topological-spaces}-\ref{item:product-topology}.), we have $(a_i^{(P)})_{P\in\scrP}\overset{\mathscr{U}}\to (c^{(P)})_{P\in\scrP}$.
+  But then, by the very way the product topology is defined (see  \cref{exa:logic-topological-spaces}-\ref{item:product-topology}.), we have $(a_i^{(P)})_{P\in\scrP}\overset{\mathscr{U}}\to (c^{(P)})_{P\in\scrP}$.
 \end{proof}
 
 \begin{corollary}
@@ -1147,10 +1147,10 @@ It is one of the most famous theorems in general topology.
 \subsection{Limits of structures and limits of theories: Restricted version of Łoś’ Theorem}
 
 The following theorem is a weak version of Jerzy Łoś’ Theorem~\cite{Los:1955}.
-The full version will be stated and proved in Section~\ref{sec:los-theorem}.
-The weak form stated below tells us that for any vocabulary $V$, the topological space $(X,\mathscr{N}_\mathfrak{M})_{\mathfrak{M}\in X}$ discussed in Example~\ref{exa:logic-topological-spaces}(a) has the following property:
+The full version will be stated and proved in \cref{sec:los-theorem}.
+The weak form stated below tells us that for any vocabulary $V$, the topological space $(X,\mathscr{N}_\mathfrak{M})_{\mathfrak{M}\in X}$ discussed in \cref{exa:logic-topological-spaces}(a) has the following property:
 If $(\mathfrak{M}_i)_{i\in I}$ is a family of structures in $X$ and $\mathscr{U}$ is an ultrafilter on $I$, then there exists a structure $\mathfrak{M}$ in $X$ such that $\mathfrak{M}_i\overset{\mathscr{U}}\to \mathfrak{M}$.
-Thus, the space $X$ is compact (see Definition~\ref{def:compactness}).
+Thus, the space $X$ is compact (see \cref{def:compactness}).
 
 \begin{theorem} (Łoś’ Theorem, restricted form)
   \label{thm:los-thm}
@@ -1167,7 +1167,7 @@ Thus, the space $X$ is compact (see Definition~\ref{def:compactness}).
   \]
 \end{theorem}
 
-In this section, we shall explore various consequences of Theorem~\ref{thm:los-thm}.
+In this section, we shall explore various consequences of \cref{thm:los-thm}.
 
 \subsection{Types and first applications}
 \label{sec:types}
@@ -1206,10 +1206,10 @@ Note that the reduct map $V(\mathbb{c})\mapsto V$ is far from being injective.
   \]
 \end{notation}
 
-The notation $\mathfrak{M}\models \varphi[\bar{a}]$ was formally introduced previously, in Section~\ref{sec:semantics}, where the definition was given by induction on the complexity of the formula $\varphi$.
-The reader is urged to review the definition given in Section~\ref{sec:semantics}  and compare it to the approach given above to verify that both are equivalent.
+The notation $\mathfrak{M}\models \varphi[\bar{a}]$ was formally introduced previously, in \cref{sec:semantics}, where the definition was given by induction on the complexity of the formula $\varphi$.
+The reader is urged to review the definition given in \cref{sec:semantics}  and compare it to the approach given above to verify that both are equivalent.
 
-We now recall two other basic definitions given in Section~\ref{sec:semantics}.
+We now recall two other basic definitions given in \cref{sec:semantics}.
 
 \begin{definition}
   \label{def:type}
@@ -1298,7 +1298,7 @@ $\{0,1\}$ to more general truth values, say, $[0,1]$, then we will be able to vi
   \end{align*}
 
   Let $\mathscr{U}$ be a nonprincipal ultrafilter on $\NN$.
-  By Theorem~\ref{thm:los-thm} (Łoś’ Theorem), there is a $V(\mathbb{c})$-structure $\mathfrak{N}^*$ such that for every sentence $\varphi(\mathbb{c})\in L_{V(\mathbb{c})}$ (where $\varphi(x)$ is a $V$-formula), we have
+  By \cref{thm:los-thm} (Łoś’ Theorem), there is a $V(\mathbb{c})$-structure $\mathfrak{N}^*$ such that for every sentence $\varphi(\mathbb{c})\in L_{V(\mathbb{c})}$ (where $\varphi(x)$ is a $V$-formula), we have
   \[
     \tag{$\ddagger$}
     \mathfrak{N}^*\models \varphi(\mathbb{c})
@@ -1400,7 +1400,7 @@ $\{0,1\}$ to more general truth values, say, $[0,1]$, then we will be able to vi
   \vdots
   \end{align*}
   where the interpretations of $\mathbb{c}$ and $\mathbb{c}'$ in $\mathfrak{N}^*_n$ are $a$ and $n$, respectively.
-  Applying Theorem~\ref{thm:los-thm} again, we obtain a $V(\mathbb{c},\mathbb{c}')$-structure $\mathfrak{N}^{**}$ such that for every $V(\mathbb{c},\mathbb{c}')$-sentence $\varphi(\mathbb{c},\mathbb{c}')$ (where $\varphi(x,y)$ is a $V$-formula), we have
+  Applying \cref{thm:los-thm} again, we obtain a $V(\mathbb{c},\mathbb{c}')$-structure $\mathfrak{N}^{**}$ such that for every $V(\mathbb{c},\mathbb{c}')$-sentence $\varphi(\mathbb{c},\mathbb{c}')$ (where $\varphi(x,y)$ is a $V$-formula), we have
   \[
     \mathfrak{N}^{**}\models \varphi(\mathbb{c},\mathbb{c}')
     \quad
@@ -1573,7 +1573,7 @@ $\{0,1\}$ to more general truth values, say, $[0,1]$, then we will be able to vi
 \subsection{Obtaining the compactness theorem from the restricted version of Łoś’ theorem}
 \label{sec:compactness-from-los}
 
-In this subsection, we use the restricted versiom of Łoś’ theorem (Theorem~\ref{thm:los-thm}) to give a short proof of one of the cornerstone theorems of first-order logic.
+In this subsection, we use the restricted versiom of Łoś’ theorem (\cref{thm:los-thm}) to give a short proof of one of the cornerstone theorems of first-order logic.
 
 \begin{definition}
   If $T$ is a theory, we say that $\mathfrak{M}$ is a \emph{model} of $T$, written
@@ -1607,19 +1607,19 @@ In this subsection, we use the restricted versiom of Łoś’ theorem (Theorem~\
   \]
 
   Then $S_\varphi$ is nonempty (since $\varphi \in S_\varphi$), and
-  the collection $\{S_\varphi \colon \varphi \in T\}$ of subsets of $T$ has the finite intersection property (Definition~\ref{def:fip}) since, for any $\varphi,\psi\in T$, we see that
+  the collection $\{S_\varphi \colon \varphi \in T\}$ of subsets of $T$ has the finite intersection property (\cref{def:fip}) since, for any $\varphi,\psi\in T$, we see that
   \[
     \varphi\wedge\psi\in S_\varphi\cap S_\psi.
   \]
 
-  Thus, by the Ultrafilter Theorem (Corollary~\ref{cor:base-extended-to-ultrafilter}), this collection can be extended to an ultrafilter $\mathscr{U}$ on $T$;
+  Thus, by the Ultrafilter Theorem (\cref{cor:base-extended-to-ultrafilter}), this collection can be extended to an ultrafilter $\mathscr{U}$ on $T$;
   this means that
   \[
     \text{$S_\varphi$
       is $\mathscr{U}$-large, for each $\varphi\in T$}.
   \]
 
-  By Łoś’ Theorem (Theorem~\ref{thm:los-thm}), there exists $\fM\in X$ such that $\fM_\varphi\overset{\mathscr{U}}\to\fM$.
+  By Łoś’ Theorem (\cref{thm:los-thm}), there exists $\fM\in X$ such that $\fM_\varphi\overset{\mathscr{U}}\to\fM$.
   It then follows that for any $\varphi \in T$, we have $\mathfrak{M}\models \varphi$.
   Thus, $\mathfrak{M}\models T$.
 \end{proof}
@@ -1629,7 +1629,7 @@ In this subsection, we use the restricted versiom of Łoś’ theorem (Theorem~\
   Gödel’s proof applies only to countable languages.
   The first proof for uncountable languages was given by Mal’cev in 1936~\cite{Malcev:1936}.
   The short topological proof we present below, using the restricted version form of Łós’ theorem
-  (Theorem~\ref{thm:los-thm}), was folklore in Tarski’s Berkeley group in the late 1950’s, and it first appeared in print in the early 1960’s in a paper about more general things~\cite{Frayne-Morel-Scott:1962}.
+  (\cref{thm:los-thm}), was folklore in Tarski’s Berkeley group in the late 1950’s, and it first appeared in print in the early 1960’s in a paper about more general things~\cite{Frayne-Morel-Scott:1962}.
 \end{history}
 
 \subsection{The Ultraproduct construction}
@@ -1848,14 +1848,14 @@ To ensure the consistency of the previous definition, we must check that the fol
   If all the structures of the family $(\mathfrak{M}_i)_{i\in I}$ equal a single structure, say $\mathfrak{M}_0$, then $\mathfrak{M}$ is called the $\mathscr{U}$-\emph{ultrapower} of $\mathfrak{M}_0$.
 \end{definition}
 
-The examples of ultraproducts presented in Example \ref{exa:nonstandard-arithmetic} and Example \ref{exa:nonstandard-analysis} are ultrapowers (of $(\NN,\dots)$ and $(\RR, \dots)$, respectively).
+The examples of ultraproducts presented in \cref{exa:nonstandard-arithmetic} and \cref{exa:nonstandard-analysis} are ultrapowers (of $(\NN,\dots)$ and $(\RR, \dots)$, respectively).
 
 \begin{theorem}
   Every ultrapower of a structure $\mathfrak{M}$ is an elementary extension of $\mathfrak{M}$.
 \end{theorem}
 
 \begin{proof}
-  Immediate from Łoś’ theorem (Theorem~\ref{thm:los-full-statement}) and the definition of elementary extension.
+  Immediate from Łoś’ theorem (\cref{thm:los-full-statement}) and the definition of elementary extension.
 \end{proof}
 
 \begin{history}
@@ -1880,7 +1880,7 @@ For a given class $K$ of structures,
 \end{itemize}
 
 We shall see that ultraproducts provide complete answers to both questions.
-The first question is answered by Theorem~\ref{thm:elementary-class} and the second one by Theorem~\ref{thm:basic-elementary-class}.
+The first question is answered by \cref{thm:elementary-class} and the second one by \cref{thm:basic-elementary-class}.
 Both criteria are due to Keisler (see the historical note at the end of the section).
 
 Throughout the rest of the section, $V$ will denote a fixed vocabulary and $K$ will denote a class of $V$-structures.
@@ -1926,7 +1926,7 @@ The following theorem gives an elegant criterion for axiomatizability of classes
   For each $\varphi\in \Th(\fN)$, fix $\fM_\varphi$ such that $\fM_\varphi \models \varphi$.
   Such a structure exists since, otherwise, we’d have that every $\fM\in K$ satisfies $\neg\varphi$, that is, $\neg \varphi \in T$, which contradicts our assumption that $\fN\models T$.
   We now have an indexed family $(\fM_\varphi)_{\varphi\in \Th(\fN)}$ of structures in $K$.
-  By the same argument given in the proof of Theorem~\ref{thm:compactness}, there exists an ultrafilter $\scrU$ on $\Th(\fN)$ such that
+  By the same argument given in the proof of \cref{thm:compactness}, there exists an ultrafilter $\scrU$ on $\Th(\fN)$ such that
   \[
     \fM \coloneqq \prod_\scrU \fM_\varphi \models \Th(\fN).
   \]
@@ -1941,7 +1941,7 @@ The following theorem gives an elegant criterion for axiomatizability of classes
 \end{lemma}
 
 \begin{proof}
-  If $K$ is finitely axiomatizable, so is $K^c$ (see Remarks~\ref{rem:finite-axiomatizability}).
+  If $K$ is finitely axiomatizable, so is $K^c$ (see \cref{rem:finite-axiomatizability}).
   Therefore, we only need to prove the opposite implication.
   Suppose
   \[
@@ -1967,7 +1967,7 @@ The following theorem gives an elegant criterion for axiomatizability of classes
   thus, $K$ is finitely axiomatizable.
 \end{proof}
 
-Bringing Theorem \ref{thm:elementary-class} and Lemma~\ref{lem:elementary-class} together, we obtain the following famous criterion for finite axiomatizability:
+Bringing \cref{thm:elementary-class} and \cref{lem:elementary-class} together, we obtain the following famous criterion for finite axiomatizability:
 
 \begin{theorem}[Characterization of finitely axiomatizable classes]
   \label{thm:basic-elementary-class}
@@ -1975,7 +1975,7 @@ Bringing Theorem \ref{thm:elementary-class} and Lemma~\ref{lem:elementary-class}
 \end{theorem}
 
 \begin{history}
-  The criteria for axiomatizability and finite axiomatizability presented in this section (namely, Theorems~\ref{thm:elementary-class} and~\ref{thm:basic-elementary-class}) were introduced by Keisler in the early 1960’s~\cite{Keisler:1961}.
+  The criteria for axiomatizability and finite axiomatizability presented in this section (namely, \cref{thm:elementary-class,thm:basic-elementary-class}) were introduced by Keisler in the early 1960’s~\cite{Keisler:1961}.
   Since then, they have been used widely to prove axiomatizability of classes of structures in algebra, analysis, probability and combinatorics.
 \end{history}
 
@@ -2037,7 +2037,7 @@ This is a nontrivial question because
 
 \end{enumerate}
 
-The Completeness Theorem of first-order logic (Theorem~\ref{thm:completeness} below) answers the preceding question in the affirmative, i.e., if\label{thm:completeness-marker} $T\models\varphi$, then there is a finitary proof of $\varphi$ from $T$.
+The Completeness Theorem of first-order logic (\cref{thm:completeness} below) answers the preceding question in the affirmative, i.e., if\label{thm:completeness-marker} $T\models\varphi$, then there is a finitary proof of $\varphi$ from $T$.
 Of course, before proving this theorem, we need a formal definition of the concept of “proof”.
 This is the content of the next section.
 
@@ -2092,7 +2092,7 @@ Throughout this section, $V$ will be fixed vocabulary.
   The \emph{logical axioms} in $L_V$ are the following formulas:
   \begin{enumerate}[i)]
   \item
-    All tautologies (see Definition~\ref{def:tautology}),
+    All tautologies (see \cref{def:tautology}),
   \item
     All the quantifier axioms, and
   \item
@@ -2163,8 +2163,8 @@ He died of starvation in a Soviet prison camp at the age of 35, following an arr
 \label{sec:completeness-statement}
 
 The concept of $\vdash$ defined in~\ref{def:proof} is \emph{syntactic} in the sense that it based on purely symbolic rules, while the concept of
-$\models$ defined in~\ref{def:logical-consequence} is \emph{semantic} in the sense that it is based on the notion of mathematical truth introduced in Section~\ref{sec:semantics}
-(see the remarks at the end of Section~\ref{sec:logical-consequence}).
+$\models$ defined in~\ref{def:logical-consequence} is \emph{semantic} in the sense that it is based on the notion of mathematical truth introduced in \cref{sec:semantics}
+(see the remarks at the end of \cref{sec:logical-consequence}).
 The following theorem links both concepts.
 
 \begin{theorem}The Completeness Theorem [Gödel, 1930, Mal’cev, 1936]
@@ -2506,21 +2506,21 @@ Now we can prove it easily from the Henkin Model Existence Theorem.
   Assume $T\not \vdash \varphi$.
   By the tautology axioms, $T\cup\{\varphi\}$ is consistent (proof:
   If $T\cup\{\varphi\}\vdash\theta\land\neg\theta$, then $T\vdash\varphi\to(\theta\land\neg\theta)$, hence $T\vdash(\theta\land\neg\theta)\to \varphi$, i.e., $T\vdash \varphi$).
-  Thus, by Lemmas~\ref{lem:add-henkin-constants} and~\ref{lem:henkin}, $T\cup\{\varphi\}$ had a model, i.e.,
+  Thus, by \cref{lem:add-henkin-constants,lem:henkin}, $T\cup\{\varphi\}$ had a model, i.e.,
   $T\not\models\varphi$.
 \end{proof}
 
-The proof of the completeness theorem reveals that not all the axioms listed in Section~\ref{sec:proof} are needed to obtain completeness.
-For example, of all the axioms given in the third group of the quantifier axioms (Definition~\ref{def:equality-axioms}), only the particular case when $\varphi$ is atomic is needed for the proof.
-Also, as we pointed out in Section~\ref{sec:proof}, of all the tautology axioms, only three types are needed.
+The proof of the completeness theorem reveals that not all the axioms listed in \cref{sec:proof} are needed to obtain completeness.
+For example, of all the axioms given in the third group of the quantifier axioms (\cref{def:equality-axioms}), only the particular case when $\varphi$ is atomic is needed for the proof.
+Also, as we pointed out in \cref{sec:proof}, of all the tautology axioms, only three types are needed.
 The Henkin method presented in this section can be adapted to prove model existence, and hence completeness, for logics more general than first-order
 (in fact, historically, Henkin devised the method to prove completeness for $\omega$-logic, which is a type of infinitary logic).
 An advantage of this method is that, for a given logic  $\scrL$, the proof of the model existence gives a set of axioms needed to obtain a complete axiomatization of $\scrL$.
 
 \subsection{Obtaining compactness from completeness}
 
-In Section~\ref{sec:compactness-from-los}, we provided a short proof of the compactness theorem using  ultraproducts and Łoś’ Theorem.
-We now provide an even proof of the compactness theorem using the completeness theorem (Theorem~\ref{thm:completeness}).
+In \cref{sec:compactness-from-los}, we provided a short proof of the compactness theorem using  ultraproducts and Łoś’ Theorem.
+We now provide an even proof of the compactness theorem using the completeness theorem (\cref{thm:completeness}).
 
 \begin{corollary}[Compactness of first-order logic]
   \label{cor:compactness-from-completeness-1}
@@ -2531,7 +2531,7 @@ We now provide an even proof of the compactness theorem using the completeness t
 \begin{proof}
   Suppose that $T$ is not satisfiable, i.e., there is no structure $\fM$ such that $\fM\models T$.
   Therefore, vacuously, $T\models \varphi\land\neg\varphi$.
-  The completeness theorem (Theorem~\ref{thm:completeness}) tells us that then,  $T\vdash \varphi\land\neg\varphi$, i.e., there is a proof of $\varphi\land\neg\varphi$ from $T$.
+  The completeness theorem (\cref{thm:completeness}) tells us that then,  $T\vdash \varphi\land\neg\varphi$, i.e., there is a proof of $\varphi\land\neg\varphi$ from $T$.
   Since proofs are finite in length, there is a finite $T_0\subseteq T$ such that $T_0\vdash \varphi\land\neg\varphi$;
   but then, by the soundness direction of the completeness theorem, we get  $T_0\models \varphi\land\neg\varphi$, which contradicts our assumption.
 \end{proof}
@@ -2545,11 +2545,11 @@ The compactness theorem can be restated as follows:
 \end{corollary}
 
 \begin{proof}
-  The statement of Corollary~\ref{cor:compactness-from-completeness-2} can be seen as the contrapositive form of Corollary~\ref{cor:compactness-from-completeness-1},
-  or it can be proved using the same argument used to prove Corollary~\ref{cor:compactness-from-completeness-1}.
+  The statement of \cref{cor:compactness-from-completeness-2} can be seen as the contrapositive form of \cref{cor:compactness-from-completeness-1},
+  or it can be proved using the same argument used to prove \cref{cor:compactness-from-completeness-1}.
 \end{proof}
 
-Both versions of the compactness theorem stated above (namely, Corollaries~\ref{cor:compactness-from-completeness-1} and~\ref{cor:compactness-from-completeness-2}) are equally useful in applications.
+Both versions of the compactness theorem stated above (namely, \cref{cor:compactness-from-completeness-1,cor:compactness-from-completeness-2}) are equally useful in applications.
 
 \subsection{The size of models of a theory: Upward and Downward Löwenheim-Skolem theorems}
 
@@ -2561,7 +2561,7 @@ Both versions of the compactness theorem stated above (namely, Corollaries~\ref{
   where $|M|,|V|$ denote, respectively, the cardinality of $M$ and the cardinality of the set of symbols in $V$.
 \end{definition}
 
-Lemma~\ref{lem:henkin} yields not only the compactness theorem as an immediate corollary, but also another cornerstone result of model theory:
+\cref{lem:henkin} yields not only the compactness theorem as an immediate corollary, but also another cornerstone result of model theory:
 
 \begin{theorem}[Downward Löwenheim-Skolem Theorem]
   \label{thm:downward-l-s}
@@ -2570,7 +2570,7 @@ Lemma~\ref{lem:henkin} yields not only the compactness theorem as an immediate c
 
 \begin{proof}
   Let $T$ be a consistent $V$-theory and let $C$ be a set of new constant symbols such that $|C| = |L_V|$, and let $\overline{V} = V\cup C$ be the expansion of $V$ formed by adding $C$.
-  By Lemmas~\ref{lem:add-henkin-constants} and ~\ref{lem:henkin}, there exists a $(V\cup C)$-structure $\fM=(M,\dots)$ such that $\fM\models T$ and every element of $M$ is the interpretation of a constant in $C$.
+  By \cref{lem:add-henkin-constants,lem:henkin}, there exists a $(V\cup C)$-structure $\fM=(M,\dots)$ such that $\fM\models T$ and every element of $M$ is the interpretation of a constant in $C$.
   The latter implies that $|M|\leq |C|=|L_V|$.
   The reduct of $\fM$ to the original vocabulary $V$ is $V$-structure that is a model of $T$.
 \end{proof}
@@ -2711,7 +2711,7 @@ A sentence $\theta$ with the property given by the preceding theorem is called a
   Otherwise, we call $T_1\subseteq L_1$ and $T_2\subseteq L_2$ \emph{inseparable}.
 \end{definition}
 
-By replacing $\psi$ with $\neg\psi$ in Theorem~\ref{thm:craig-interpolation}, we get the following version of Craig’s theorem:
+By replacing $\psi$ with $\neg\psi$ in \cref{thm:craig-interpolation}, we get the following version of Craig’s theorem:
 
 \begin{theorem}[Craig Interpolation Theorem, second version]
   \label{thm:craig-interpolation-v2}
@@ -2767,7 +2767,7 @@ By replacing $\psi$ with $\neg\psi$ in Theorem~\ref{thm:craig-interpolation}, we
 
 \end{figure}
 
-\begin{proof}[Proof of Theorem~\ref{thm:craig-interpolation-v2}]
+\begin{proof}[Proof of \cref{thm:craig-interpolation-v2}]
   Assume $\varphi$ and $\psi$ are inseparable.
   We will show it is not the case that $\Mod(\varphi)\cap\Mod(\psi)=\emptyset$ by constructing a model of $\varphi\wedge \psi$.
 
@@ -2849,7 +2849,7 @@ By replacing $\psi$ with $\neg\psi$ in Theorem~\ref{thm:craig-interpolation}, we
   We are now ready to construct our model.
 
   Since $T_\omega$ is maximal consistent and, by construction, has
-  $C$ as a set of witnesses, by the Henkin construction (Lemma~\ref{lem:henkin}), it has a model $\fN_\varphi ' = (\fN_\varphi,a_0,a_1,\dots)$ with universe $\{ a_0,a_1,\dots \}$, where $\fN_\varphi$ is the reduct of $\fN_\varphi '$ to $V_\varphi$.
+  $C$ as a set of witnesses, by the Henkin construction (\cref{lem:henkin}), it has a model $\fN_\varphi ' = (\fN_\varphi,a_0,a_1,\dots)$ with universe $\{ a_0,a_1,\dots \}$, where $\fN_\varphi$ is the reduct of $\fN_\varphi '$ to $V_\varphi$.
   Similarly, $U_\omega$ has a model $\fN_\psi'=(\fN_\psi,b_0,b_1,\dots)$ with universe $\{b_0,b_1,\dots\}$.
 
   Let $\fM_\varphi'$ and $\fM_\psi '$ denote the reducts of $\fN_\varphi '$ and $\fN_\psi '$ to $V_\varphi'\cap V_\psi '$, respectively.
@@ -3173,7 +3173,7 @@ The following theorem is called the “joint embedding property” of first-orde
     \Th\big((\fN,b)_{b\in N}\big)
   \]
   of the elementary diagrams of $\fM$ and $\fN$ has a model.
-  However, this follows directly from Robinson’s Joint Consistency Theorem (Theorem~\ref{thm:joint-consistency}) since the restriction of this theory to the common vocabulary $V$ is $\Th(\fM) =\Th(\fN)$,
+  However, this follows directly from Robinson’s Joint Consistency Theorem (\cref{thm:joint-consistency}) since the restriction of this theory to the common vocabulary $V$ is $\Th(\fM) =\Th(\fN)$,
   which is obviously complete.
 \end{proof}
 
@@ -3192,7 +3192,7 @@ The following theorem is called the “joint embedding property” of first-orde
 \end{theorem}
 
 \begin{proof}
-  This can be obtained either directly,  using the compactness argument of the preceding remark, or as a corollary of Theorem~\ref{thm:joint-embedding} by replacing $I$ with an ordinal $\alpha$ and using induction on $\alpha$.
+  This can be obtained either directly,  using the compactness argument of the preceding remark, or as a corollary of \cref{thm:joint-embedding} by replacing $I$ with an ordinal $\alpha$ and using induction on $\alpha$.
   In either case, the proof is straightforward.
 \end{proof}
 
@@ -3314,17 +3314,17 @@ This is the content of the following definition as well as the main topic of thi
     \[
       (M, \bar{c}_i, a)_{a\in M}\overset{\mathscr{U}}\to (M^*, \bar{c}, a)_{a\in M}
     \]
-    in the topology of Example \ref{exa:logic-topological-spaces}-(a).
+    in the topology of \cref{exa:logic-topological-spaces}-(a).
   \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-  Condition (1) is just a restatement of Łoś’ theorem (Theorem~\ref{thm:los-thm}).
-  Condition (2) follows from (1)  (by Example~\ref{exa:los-embedding}), but it was also established independently in the preceding remarks.
+  Condition (1) is just a restatement of Łoś’ theorem (\cref{thm:los-thm}).
+  Condition (2) follows from (1)  (by \cref{exa:los-embedding}), but it was also established independently in the preceding remarks.
   Finally, it can be seen directly from the definitions that Conditions (2) and (3) are restatements of each other.
 \end{proof}
 
-The following is a converse of Theorem~\ref{thm:averages-are-realized}.
+The following is a converse of \cref{thm:averages-are-realized}.
 
 \begin{theorem}
   \label{thm:elements-are-averages}
@@ -3334,7 +3334,7 @@ The following is a converse of Theorem~\ref{thm:averages-are-realized}.
 \end{theorem}
 
 \begin{proof}
-  We argue as in the proof of Theorem~\ref{thm:compactness}.
+  We argue as in the proof of \cref{thm:compactness}.
   Fix an elementary extension $M^*$ of $M$ and an $n$-tuple $\bar{c}$of elements in $M^*$.
   We wish to find an indexed family $(\bar{c}_i)_{i\in I}$ of $n$-tuples of elements in $M$ and an ultrafilter $\mathscr{U}$ on $I$ such that for each $V(M)$-formula $\varphi(\bar{x})$,
   \[
@@ -3357,11 +3357,11 @@ The following is a converse of Theorem~\ref{thm:averages-are-realized}.
   \]
 
   Then $S_\varphi$ is nonempty (since $\varphi \in S_\varphi$), and
-  the collection $\{S_\varphi \colon \varphi \in I\}$ of subsets of $I$ has the finite intersection property (Definition~\ref{def:fip}) since, for any $\varphi,\psi\in \tp_{M^*}(\bar{c})$, we have
+  the collection $\{S_\varphi \colon \varphi \in I\}$ of subsets of $I$ has the finite intersection property (\cref{def:fip}) since, for any $\varphi,\psi\in \tp_{M^*}(\bar{c})$, we have
   \[
     \varphi\wedge\psi\in S_\varphi\cap S_\psi.
   \]
-  By the Ultrafilter Theorem (Corollary~\ref{cor:base-extended-to-ultrafilter}), there exists an ultrafilter $\scrU$ on $I$ that extends $\{S_\varphi \colon \varphi \in I\}$, i.e.,
+  By the Ultrafilter Theorem (\cref{cor:base-extended-to-ultrafilter}), there exists an ultrafilter $\scrU$ on $I$ that extends $\{S_\varphi \colon \varphi \in I\}$, i.e.,
   \[
     \text{$S_\varphi$
       is $\mathscr{U}$-large, for each $\varphi(\bar{x}) \in I$}.
@@ -3378,7 +3378,7 @@ The following is a converse of Theorem~\ref{thm:averages-are-realized}.
   then we say that $\bar{c}$ \emph{realizes} the average $\Av_{\scrU} (\Phi\tp_M(\bar{c}_i))_{i\in I}$ in $M^*$.
 \end{definition}
 
-We can summarize Theorems~\ref{thm:averages-are-realized} and \ref{thm:elements-are-averages} as follows:
+We can summarize \cref{thm:averages-are-realized,thm:elements-are-averages} as follows:
 
 \begin{corollary}
   An $n$-tuple $\bar{c}$ is in an elementary extension of $M$ if and only if it is in an ultrapower of $M$ if and only if it realizes a full average of a family of types of $n$-tuples of elements in $M$.
@@ -3425,7 +3425,7 @@ Fix a $V$-structure $M$ and an ultrafilter $\scrU$ on an index set $I$.
   \begin{enumerate}[i)]
   \item
     If $\xi < \kappa$, then $M_n^{\xi + 1}$ is the $\scrU$-ultraproduct of the family $((M_n^\xi, \bar{c}_i))_{i\in I}$, where $(\bar{c}_i)_{i\in I}$ is $((\bar{c}_i)_{i\in I})_\xi$.
-    Note that, by Theorem~\ref{thm:averages-are-realized}, $\Av_\scrU (\tp_{M_n^\xi} (\bar{c}_i))_{i\in I}$ is realized in $M_n^{\xi + 1}$.
+    Note that, by \cref{thm:averages-are-realized}, $\Av_\scrU (\tp_{M_n^\xi} (\bar{c}_i))_{i\in I}$ is realized in $M_n^{\xi + 1}$.
   \item
     If $\zeta < \kappa$ is a limit ordinal, then
     \[
@@ -3489,7 +3489,7 @@ of structures such that:
 \begin{enumerate}[i)]
 \item
   If $\xi<\lambda$, then, for all $n$, if $(\bar{c}_i)_{i\in I}$ is an indexed family of $n$-tuples of elements in $M_\xi$, then there is an $n$-tuple $\bar{c}$ of elements in $M_{\xi + 1}$ which realizes $\Av_\scrU(\tp_{M_\xi}(\bar{c}_i))_{i\in I}$.
-  Such a structure $M_{\xi +1}$ exists by Lemma~\ref{lem:all-averages-are-realized}.
+  Such a structure $M_{\xi +1}$ exists by \cref{lem:all-averages-are-realized}.
 
 \item
   If $\zeta < \lambda$ is a limit ordinal, then
@@ -3541,7 +3541,7 @@ The preceding proposition motivates the following important definition:
   there exists an $n$-tuple $\bar{c}$ of elements in $\overline{M}$ such that $\bar{c}$ realizes $\Av_{\scrU} (\tp_A(\bar{c}_i))_{i\in I}$.
 \end{definition}
 
-Proposition~\ref{prop:existence-of-saturated-extensions} shows the following important theorem:
+\cref{prop:existence-of-saturated-extensions} shows the following important theorem:
 
 \begin{theorem}[Existence of $\lambda$-saturated models]
   \label{thm:existence-of-lambda-saturated-models}
@@ -3580,12 +3580,12 @@ Proposition~\ref{prop:existence-of-saturated-extensions} shows the following imp
   \]
 
   Then $S_\varphi$ is nonempty (since $\varphi \in S_\varphi$), and
-  the collection $S = \{S_\varphi \colon \varphi \in \Sigma\}$ of subsets of $\Sigma$ has the finite intersection property (Definition~\ref{def:fip}) since, for any $\varphi,\psi\in \Sigma$, we see that
+  the collection $S = \{S_\varphi \colon \varphi \in \Sigma\}$ of subsets of $\Sigma$ has the finite intersection property (\cref{def:fip}) since, for any $\varphi,\psi\in \Sigma$, we see that
   \[
     \varphi\wedge\psi\in S_\varphi\cap S_\psi.
   \]
 
-  Thus, by the Ultrafilter Theorem (Corollary~\ref{cor:base-extended-to-ultrafilter}), the collection $S$ can be extended to an ultrafilter $\mathscr{U}$ on $\Sigma$;
+  Thus, by the Ultrafilter Theorem (\cref{cor:base-extended-to-ultrafilter}), the collection $S$ can be extended to an ultrafilter $\mathscr{U}$ on $\Sigma$;
   this means that
   \[
     \text{$S_\varphi$
@@ -3595,7 +3595,7 @@ Proposition~\ref{prop:existence-of-saturated-extensions} shows the following imp
 \end{proof}
 
 Recall that a $V$-theory $T$ is said to be \emph{complete} if for every $V$-sentence $\varphi$, either $T\models \varphi$ or $T\models \neg\varphi$
-(see Definition~\ref{def:complete-theory}).
+(see \cref{def:complete-theory}).
 If $T$ is complete and $M,N$ are models of $T$, then $M\equiv N$.
 
 Fix a complete $V$-theory $T$ and a regular cardinal $\lambda > |L_V|$, and let $\overline{M}$ be a $\lambda$-saturated model of $T$.
@@ -3612,7 +3612,7 @@ Practitioners of model theory often refer to such $\overline{M}$ as a “monster
   Then, $\Sigma_0$ is of the form $\theta(\bar{b})$, so $N$ satisfies the $V$-sentence $(\exists \bar{x})\theta(\bar{x})$, and thus $\overline{M} \models (\exists \bar{x})\theta(\bar{x})$.
   This means there is a tuple $\bar{a}$ of elements in $\overline{M}$ such that $\overline{M} \models \theta(\bar{a})$.
 
-  We have shown that $\Sigma$ is finitely satisfiable, so, by Corollary~\ref{cor:compactness-for-realizing-formulas}, we have that $\Sigma$ is satisfiable in $\overline{M}$.
+  We have shown that $\Sigma$ is finitely satisfiable, so, by \cref{cor:compactness-for-realizing-formulas}, we have that $\Sigma$ is satisfiable in $\overline{M}$.
   Thus, for each $b\in N$, there is $b^M\in M$ such that
   \[
     (N,b)_{b\in N} \equiv (M, b^M)_{b\in N},
@@ -3659,7 +3659,7 @@ The main resuts of this section are Theorems~\ref{thm:saturation-and-homogeneity
   \[
     (M,a_\xi)_{\xi<\eta} \equiv  (M,b_\xi)_{\xi<\eta}
   \]
-  and $c\in M$, then by Corollary~\ref{cor:compactness-for-realizing-formulas}, the type of $c$ in $(M,a_\eta)_{\xi<\eta}$ is realized by an element $d\in M$ in $(M,b_\xi)_{\xi<\eta}$.
+  and $c\in M$, then by \cref{cor:compactness-for-realizing-formulas}, the type of $c$ in $(M,a_\eta)_{\xi<\eta}$ is realized by an element $d\in M$ in $(M,b_\xi)_{\xi<\eta}$.
   Therefore,
   \[
     (M,a_\eta,c)_{\xi<\eta} \equiv (M,b_\xi,d)_{\xi<\eta}.
@@ -3677,7 +3677,7 @@ The following theorem describes how these relationships arise.
 
 \begin{proof}
   Suppose that $M$ is $\lambda$-saturated.
-  By the preceding remark and Corollary~\ref{cor:compactness-for-realizing-formulas},
+  By the preceding remark and \cref{cor:compactness-for-realizing-formulas},
   $M$ is both $\lambda$-homogeneous and $\lambda$-universal.
 
   Suppose now that $M$ is $\lambda$-universal and $\lambda$-homogeneous.
@@ -3688,7 +3688,7 @@ The following theorem describes how these relationships arise.
   We will now prove that this average is realized by $M$.
 
   Fix a $V(C)$-structure $(N,b_\xi,c)_{\xi<\eta}$ that satisfies $\Th((M,a_\xi)_{\xi<\eta})\cup\Sigma(x)$ such that $c$ realizes $\Sigma(x)$.
-  By the Downward Löwenheim-Skolem theorem (Theorem~\ref{thm:downward-l-s}), we can assume $|N|<\lambda$ .
+  By the Downward Löwenheim-Skolem theorem (\cref{thm:downward-l-s}), we can assume $|N|<\lambda$ .
   Then
   \[
     (N,b_\xi)_{\xi<\eta} \equiv (M,a_\xi)_{\xi<\eta}
@@ -3750,7 +3750,7 @@ The proof of this theorem follows the \emph{back-and-forth} method used by Canto
   $\eta=\gamma+2m$, where $m<\omega$.
 
   Let $a'_\eta=a_{\gamma+m}$.
-  By (3) and Corollary~\ref{cor:compactness-for-realizing-formulas}, since the type of $a'_\eta$ in $(M,a'_\xi)_{\xi<\eta}$ is finitely realizable in  $(N,b'_\xi)_{\xi<\eta}$, the type of $a'_\xi$ is realized in $(N,b'_\xi)_{\xi<\eta}$.
+  By (3) and \cref{cor:compactness-for-realizing-formulas}, since the type of $a'_\eta$ in $(M,a'_\xi)_{\xi<\eta}$ is finitely realizable in  $(N,b'_\xi)_{\xi<\eta}$, the type of $a'_\xi$ is realized in $(N,b'_\xi)_{\xi<\eta}$.
   Let $b'_\eta$ realize the type of $a'_\eta$ in $(N,b'_\xi)_{\xi<\eta}$.
   Then,
   \[
@@ -3761,7 +3761,7 @@ The proof of this theorem follows the \emph{back-and-forth} method used by Canto
   $\eta=\gamma+(2m+1)$, where $m<\omega$.
 
   Let $b'_\eta=b_{\gamma+m}$.
-  By (3) and Corollary~\ref{cor:compactness-for-realizing-formulas}, since the type of $b'_\eta$ in $(N,b'_\xi)_{\xi<\eta}$ is finitely realizable in $(M, a'_\xi)_{\xi<\eta}$, the type of $a'_\eta$ is realized in $(M,a'_\xi)_{\xi<\eta}$.
+  By (3) and \cref{cor:compactness-for-realizing-formulas}, since the type of $b'_\eta$ in $(N,b'_\xi)_{\xi<\eta}$ is finitely realizable in $(M, a'_\xi)_{\xi<\eta}$, the type of $a'_\eta$ is realized in $(M,a'_\xi)_{\xi<\eta}$.
   Let $a'_\eta$ realize the type of $b'_\eta$ in $(M,a'_\xi)_{\xi<\eta}$.
   Then,
   \[
@@ -3785,7 +3785,7 @@ The proof of this theorem follows the \emph{back-and-forth} method used by Canto
   $a=(a_\xi)_{\xi<\lambda}$
   and
   $b=(b_\xi)_{\xi<\lambda}$.
-  By Lemma~\ref{lem:back-and-forth-for-saturation}, there exist expansions
+  By \cref{lem:back-and-forth-for-saturation}, there exist expansions
   $a'=(a'_\xi)_{\xi<\lambda}$
   and
   $b'=(b'_\xi)_{\xi<\lambda}$,
@@ -4149,7 +4149,7 @@ also implies the reverse implication
 
 We will show the contrapositive of $(**)$.
 Suppose that, for all $p\in G$, we have $p\not\Vdash \varphi$.
-Then, by condition iii) of Definition~\ref{def:generic}, we must have $p\Vdash \neg \varphi$.
+Then, by condition iii) of \cref{def:generic}, we must have $p\Vdash \neg \varphi$.
 By $(*)$, this means $M\models \neg \varphi$, so, by definition of $\models$, we have $M\not\models \varphi$.
 
 \begin{definition}
@@ -4198,7 +4198,7 @@ The Generic Model Theorem is an immediate consequence of the following two lemma
     G = \{ q\in P \colon q\le p_n \text{ for some } n<\omega \}.
   \]
   Clearly, $p\in G$.
-  It only remains to be shown that $G$ satisfies the conditions of generic sets given in Definition~\ref{def:generic}.
+  It only remains to be shown that $G$ satisfies the conditions of generic sets given in \cref{def:generic}.
 
   \begin{enumerate}[i)]
   \item
@@ -4355,7 +4355,7 @@ The set $P$ of all finite pieces of $K$, with $\le$ being the inclusion relation
 \]
 is the forcing property $\scrP(K)$ we saw in Example~\ref{exa:forcing-properties}.
 
-In Section 8.3 we defined generic model \emph{for a condition $p\in P$} (see Definition~\ref{def:generic-model-for-p}).
+In Section 8.3 we defined generic model \emph{for a condition $p\in P$} (see \cref{def:generic-model-for-p}).
 Now we define the notion of generic model without mention of any conditions in $p$.
 
 \begin{definition}
@@ -4417,8 +4417,8 @@ The following lemmas hold for any forcing property $\scrP$.
   \]
   where each $\varphi_i$ is a basic sentence.
 
-  This means, by Proposition~\ref{prop:forcing} vii), that for all $q\ge p $ and every $\varphi_i$, there exists $r_i\ge q$ such that $r_i \Vdash \varphi_i$.
-  By Proposition~\ref{prop:forcing} ii), this is equivalent to saying that
+  This means, by \cref{prop:forcing} vii), that for all $q\ge p $ and every $\varphi_i$, there exists $r_i\ge q$ such that $r_i \Vdash \varphi_i$.
+  By \cref{prop:forcing} ii), this is equivalent to saying that
   \[
     p\Vdash^w \varphi_1,\dots , p\Vdash^w \varphi_n.
   \]
@@ -4448,15 +4448,15 @@ The following lemmas hold for any forcing property $\scrP$.
 
   Let $\psi(x_1\dots x_m)$ be $\bigvee_{n< \omega} \exists y_1 \dots \exists y_{i_n} ( \varphi_{n1}\wedge \dots \wedge \varphi_{nj_n})$, and suppose $\varphi$ holds in all $K$-generic models.
   This is true if and only if, for all $m$-tuples $\bar{c}$ in $C$, $\psi(\bar{c})$ holds in all $K$-generic models for $0$.
-  By Lemma~\ref{lem:weakly-forces}, this means that for all $m$-tuples $\bar{c}$ in $C$, we have $0\Vdash ^w \psi (\bar{c})$.
-  By Proposition~\ref{prop:forcing} ii), we have that for all $m$-tuples $\bar{c}$ in $C$ and $p\in P$, there exists $q\supseteq p$ such that $q\Vdash \psi(\bar{c})$.
+  By \cref{lem:weakly-forces}, this means that for all $m$-tuples $\bar{c}$ in $C$, we have $0\Vdash ^w \psi (\bar{c})$.
+  By \cref{prop:forcing} ii), we have that for all $m$-tuples $\bar{c}$ in $C$ and $p\in P$, there exists $q\supseteq p$ such that $q\Vdash \psi(\bar{c})$.
   But this means for all $m$-tuples $\bar{c}$ in $C$ and $p\in P$, there exists $q \supseteq p$ in $P$, $n<\omega$, and $\bar{d} \in C^{i_n}$ such that
 
   \[
     q \Vdash \varphi_{n1}(\bar{c},\bar{d}) \wedge \dots \wedge \varphi_{nj_n}(\bar{c},\bar{d}).
   \]
 
-  By Lemma~\ref{lem:force-conjunction}, there exists $r\ge q$ such that
+  By \cref{lem:force-conjunction}, there exists $r\ge q$ such that
   \[
     r \Vdash \varphi_{n1}(\bar{c},\bar{d}) , \dots , r \Vdash \varphi_{nj_n}(\bar{c},\bar{d}).
   \]
@@ -4471,7 +4471,7 @@ The following lemmas hold for any forcing property $\scrP$.
    & r \cup \{\theta\} \Vdash \theta, \quad \text{and} \\
    & r \cup \{\theta\} \Vdash \neg \theta,
   \end{align*}
-  contradicting Proposition~\ref{prop:forcing} iii).
+  contradicting \cref{prop:forcing} iii).
   Thus, $r\cup \{\omega\}$ is not a finite piece of $M$, whence $r\cup \{ \varphi_{nj}(\bar{c},\bar{d}) \}$ is.
   Since $\varphi_{nj}(\bar{c},\bar{d})$ was arbitrary, we see that
   \[
@@ -4502,7 +4502,7 @@ The following lemmas hold for any forcing property $\scrP$.
 
 \begin{proof}
   We want to show that each $\aore$ sentence $\varphi \in T$ is true in all $K$-generic models.
-  By Theorem~\ref{thm:for-omitting}, it suffices to show that, for every $\varphi \in T$, $p\in P$, and $m$-tuple $\bar{c}$ in $C$, the set
+  By \cref{thm:for-omitting}, it suffices to show that, for every $\varphi \in T$, $p\in P$, and $m$-tuple $\bar{c}$ in $C$, the set
   \[
     p\cup \{ \psi(\bar{c}) \}
   \]
@@ -4538,8 +4538,8 @@ The following lemmas hold for any forcing property $\scrP$.
     p\cup \{ \psi_n(\bar{c}) \}
   \]
   is satisfiable in $K$.
-  Then, by Theorem~\ref{thm:for-omitting}, every sentence $\varphi_n$ holds in every generic model.
-  Moreover, by Corollary~\ref{cor:for-omitting}, every generic set is in $K$.
+  Then, by \cref{thm:for-omitting}, every sentence $\varphi_n$ holds in every generic model.
+  Moreover, by \cref{cor:for-omitting}, every generic set is in $K$.
 \end{proof}
 
 \begin{history}
@@ -4790,7 +4790,7 @@ Furthermore, any modulus of uniformity for~$\mathscr{C}$ is also a modulus of un
 
 \begin{definition}
   \label{def:ultraproduct}
-The structure $(\prod_{\lambda\in\Lambda} \fM_\lambda)_{\mathscr{U}}$ in Proposition~\ref{prop:ultraproduct} is called the \emph{$\scrU$-ultraproduct} of the family $(\fM_\lambda)_{\lambda\in \Lambda}$.
+The structure $(\prod_{\lambda\in\Lambda} \fM_\lambda)_{\mathscr{U}}$ in \cref{prop:ultraproduct} is called the \emph{$\scrU$-ultraproduct} of the family $(\fM_\lambda)_{\lambda\in \Lambda}$.
 \end{definition}
 
 Note that the hypothesis that a class~$\SC$ is uniform asserts that the collection $(f^{\fM}\mid\fM\in\SC)$ of interpretations of a given function symbol $f$ is an equicontinuous and equibounded family, precisely as in the statement of the Arzelà-Ascoli theorem.
@@ -5068,7 +5068,7 @@ Then, $\fM\not\appmod \varphi[a_1,\dots,a_n]$ if and only there exists a formula
 We have $\fM\models \wneg\varphi'$ and hence $\fM\appmod \wneg\varphi'$.
 Conversely, assume that there exists $\varphi'\apprto\varphi$ such that $\fM \appmod \wneg\varphi'$.
 Take sentences $\psi,\psi'$ such that $\varphi\apprby\psi\apprby\psi'\apprby\varphi'$.
-Then $\fM\models\wneg\psi'$ (by Remark~\ref{rem:approximations}-(3)) and hence $\fM \not\models\psi$, so $\fM \not\appmod \varphi$.
+Then $\fM\models\wneg\psi'$ (by \cref{rem:approximations}-(3)) and hence $\fM \not\models\psi$, so $\fM \not\appmod \varphi$.
 \end{proof}
 
 \subsection{Theories, elementary equivalence, and elementary substructures}
@@ -5091,7 +5091,7 @@ If $\mathscr{C}$ is any class of $V$-structures, the class $\mathscr{C}\cap\Mod(
 We say that $\SC$ \emph{is $V$-axiomatizable}, or \emph{$\SC$ is axiomatizable by~$T$,} when the language or the theory need to be specified.
 
               \item A $V$-theory~$T$ is \emph{uniform} if the class of all models of~$T$ is uniform.
-(See Proposition~\ref{prop:uniformity-axiomatizable}.)
+(See \cref{prop:uniformity-axiomatizable}.)
 
 		\item
 		The \emph{complete $V$-theory of a structure~$\fM$}, denoted $\thry{(\fM)}$, is the set of all $V$-sentences $\varphi$ such that $\fM\appmod\varphi$.
@@ -5173,11 +5173,11 @@ $\fM\appmod\exists_ry\,\varphi[a_1,\dots, a_n]$.
 \end{proposition}
 
 \begin{proof}
-For part (\ref{item:elementary-equivalence}), the direct implication follows by definition of elementary equivalence, while the converse follows from Proposition~\ref{prop:negation}.
+For part (\ref{item:elementary-equivalence}), the direct implication follows by definition of elementary equivalence, while the converse follows from \cref{prop:negation}.
 For (\ref{item:tarski-vaught}), the direct implication is trivial, and the converse follows by induction on the complexity of~$\varphi$.
 \end{proof}
 
-The following is an immediate consequence of Proposition~\ref{prop:elementary}-(\ref{item:tarski-vaught}):
+The following is an immediate consequence of \cref{prop:elementary}-(\ref{item:tarski-vaught}):
 
 \begin{proposition}[Downward L\"owenheim-Skolem Theorem]
 \label{prop:downward-lowenheim-skolem}
@@ -5197,7 +5197,7 @@ $\card(\fM_0)\le\card(A)+\card(L)$.
 An \emph{elementary chain} is a family $(\fM_i)_{i\in I}$ of structures, indexed by some linearly ordered set~$(I,<)$, such that $\fM_i\prec\fM_j$ if $i<j$.
 \end{definition}
 
-Another useful consequence of Proposition~\ref{prop:elementary} is the elementary chain property:
+Another useful consequence of \cref{prop:elementary} is the elementary chain property:
 
 
 \begin{proposition}[The Elementary Chain Property]
@@ -5206,7 +5206,7 @@ If $(\fM_i)_{i\in I}$ is an elementary chain, then $\bigcup_{i\in I} \fM_i$ is a
 \end{proposition}
 
 \begin{proof}
-By Proposition~\ref{prop:elementary}.
+By \cref{prop:elementary}.
 \end{proof}
 
 \subsection{\Los' Theorem}
@@ -5234,7 +5234,7 @@ is $\mathscr{U}$-large.
 \end{theorem}
 
 \begin{proof}
-Using the definition of $\scrU$-ultraproduct of structures and the interpretation of function symbols therein (Proposition~\ref{prop:ultraproduct} and Definition~\ref{def:ultraproduct}), \Los' Theorem follows by induction on the complexity of~$\varphi$.
+Using the definition of $\scrU$-ultraproduct of structures and the interpretation of function symbols therein (\cref{prop:ultraproduct} and \cref{def:ultraproduct}), \Los' Theorem follows by induction on the complexity of~$\varphi$.
 \end{proof}
 
 An important corollary of \Los' theorem is the special case when all the structures $\fM_\lambda$ equal the same structure $\fM$.
@@ -5265,8 +5265,8 @@ For every finite subset $\varphi$ of $T_\approx$, let $\Lambda_{\supseteq\varphi
 Then $\fM_\lambda\models\varphi$ for every $\lambda\in\Lambda_{\supseteq\varphi}$.
 Note that the collection of subsets of $\Lambda$ of the form $\Lambda_{\supseteq\varphi}$ is closed under finite intersections since $\Lambda_{\supseteq\varphi}\cap\Lambda_{\supseteq\Psi} = \Lambda_{\supseteq\varphi\cup\Psi}$.
 Let $\mathscr{U}$ be an ultrafilter on $\Lambda$ extending this collection.
-Then, by \Los' Theorem (Theorem~\ref{thm:los}), we have $(\prod_{\lambda\in\Lambda} \fM_\lambda)_{\mathscr{U}} \appmod T$.
-Furthermore, $(\prod_{\lambda\in\Lambda} \fM_\lambda)_{\mathscr{U}}$ admits the same modulus of uniformity as the family $(\fM_\lambda)_{\lambda\in\Lambda}$, by Proposition~\ref{prop:ultraproduct}.
+Then, by \Los' Theorem (\cref{thm:los}), we have $(\prod_{\lambda\in\Lambda} \fM_\lambda)_{\mathscr{U}} \appmod T$.
+Furthermore, $(\prod_{\lambda\in\Lambda} \fM_\lambda)_{\mathscr{U}}$ admits the same modulus of uniformity as the family $(\fM_\lambda)_{\lambda\in\Lambda}$, by \cref{prop:ultraproduct}.
 \end{proof}
 
 The following corollary amounts to a restatement of the Compactness Theorem that does not explicitly mention approximation of formulas.
@@ -5277,7 +5277,7 @@ If $\Upsilon$ is a uniform theory and $T$ is any collection of sentences such th
 \begin{proof}
 Every finite subset $\varphi$ of $(\Upsilon\cup T)_{\approx}$ must be a subset of $(\Upsilon\cup T')_{\approx}$ for some finite subset $T'\subseteq T$.
 By hypothesis, $\Upsilon\cup T'$ has a model, which is thus also a model of $\varphi$ in the semantics of discrete satisfaction.
-By the Compactness Theorem (Theorem~\ref{thm:compactness}), $\Upsilon\cup T$ has a model.
+By the Compactness Theorem (\cref{thm:compactness}), $\Upsilon\cup T$ has a model.
 \end{proof}
 
 \begin{remarks}
@@ -5287,7 +5287,7 @@ For any set $\Phi$ of $V$-formulas, let $\Mod_{\SC}(\Phi) = \SC\cap\Mod(\Phi)$ b
 We topologize $\SC$ by taking as a basis of closed sets the collection of all classes of the form $\Mod_{\SC}(\varphi)$ as $\varphi$ varies over~$V$-formulas; thus, closed sets are of the form $\Mod_{\SC}(\Phi)$.
 We refer to this as the \emph{logic topology on structures.}
 
-Corollary~\ref{cor:compactness} is equivalent to the following statement:
+\cref{cor:compactness} is equivalent to the following statement:
 If $\SC = \Mod(\Upsilon)$ is the class of models of a uniform $V$-theory~$\Upsilon$, and $T$ is any collection of $V$-sentences such that the family
 \[
 \left(\ \Mod_{\SC}(\Phi) \mid \text{$\Phi$ is a finite subset of $T$}\ \right)
@@ -5308,10 +5308,10 @@ this follows from the fact that $\SC$ is a subspace of the compact (hence regula
 
 
 Now we present three useful applications of the Compactness Theorem.
-The first one (Corollary~\ref{cor:complete-theories}) gives a finitary condition for a theory to be of the form $\thry(\fM)$ for some structure $\fM$.
-The second one (Corollary~\ref{cor:elementary-equivalence}), states that any two models of a complete theory $T$ can be jointly elementarily embedded in a single model of $T$.
+The first one (\cref{cor:complete-theories}) gives a finitary condition for a theory to be of the form $\thry(\fM)$ for some structure $\fM$.
+The second one (\cref{cor:elementary-equivalence}), states that any two models of a complete theory $T$ can be jointly elementarily embedded in a single model of $T$.
 
-Recall (Definition~\ref{def:model}) that the complete theory of a structure $\fM$ is denoted $\thry(\fM)$.
+Recall (\cref{def:model}) that the complete theory of a structure $\fM$ is denoted $\thry(\fM)$.
 
 
 \begin{corollary}
@@ -5334,7 +5334,7 @@ The theory~$T$ is complete, i.e., there exists a structure $\fM$ such that $T=\t
 
 \begin{proof}
 	We only have to prove  (\ref{item:complete-theory-conditions})$\Rightarrow$(\ref{item:complete-theory}).
-By part~(a) of~(\ref{item:complete-theory-conditions}) and Corollary~\ref{cor:compactness}, $T$ has a model $\fM$ whose theory $\thry(\fM)$ extends~$T$.
+By part~(a) of~(\ref{item:complete-theory-conditions}) and \cref{cor:compactness}, $T$ has a model $\fM$ whose theory $\thry(\fM)$ extends~$T$.
 Part~(b) of~(\ref{item:complete-theory-conditions}) gives $\thry(\fM)\subseteq T$, proving~(\ref{item:complete-theory}).
 \end{proof}
 
@@ -5347,7 +5347,7 @@ In particular, if $A$ is a  set of elements of $\fM$, we denote by
 	(\fM,a \mid a\in A)
 	\]
 	 the expansion of $\fM$  that results from adding a constant for each $a\in A$.
-If, in this case, $C$ is a set of constant symbols not already in $V$ that includes one constant symbol designating each constant $a\in A$, we informally refer to the vocabulary $V[C]$ (see Definition~\ref{def:vocabularies})  as~$V[A]$.
+If, in this case, $C$ is a set of constant symbols not already in $V$ that includes one constant symbol designating each constant $a\in A$, we informally refer to the vocabulary $V[C]$ (see \cref{def:vocabularies})  as~$V[A]$.
 Thus, we informally call the preceding expansion of $\fM$ an ``$V[A]$-structure''.
 If $A$ consists of all the elements of $\fM$, we write $(\fM, a \mid a\in A)$ as $(\fM, a\mid a\in \fM)$ and denote the expanded vocabulary by~$V[\fM]$.
 \end{notation}
@@ -5381,14 +5381,14 @@ Moreover, $\fN$ can be taken to be an ultrapower of $\fM$.
 It suffices to prove the direct implication, since the inverse is clear.
 Assume $\fM\equiv\fM'$.
 Let $T$ be the complete $V[\fM]$-theory of $\fM$ and $T'$ the complete $V[\fM']$-theory of~$\fM'$.
-Both $T$ and $T'$ are uniform theories, by Remark~\ref{rem:th-m-uniform}.
+Both $T$ and $T'$ are uniform theories, by \cref{rem:th-m-uniform}.
 First we show that every finite subset of $T'_{\approx}\cup T$ has a model.
 Since $T'$ is closed under conjunctions, it suffices to show that $T\cup\{\psi\}$ has a model whenever $\psi\in T'_{\approx}$.
 Any given formula in $T'_\approx$ is of the form $\varphi'(c_{b_1},\dots,c_{b_n})$, where $\varphi'$ is an approximation of a formula $\varphi$ in $T'$ and $c_{b_i}$ is a constant for an element $b_i$ of~$\fM'$, for $i=1,\dots, n$.
 Since $\fM'\appmod\varphi[b_1,\dots,b_n]$ by assumption, then there exists $r>0$ such that $\fM'\appmod\exists_r x_1\dots \exists_r x_n\,\varphi(x_1,\dots,x_n)$.
 Now, since $\fM\equiv\fM'$ and $\varphi'\apprto\varphi$, the semantics of approximate satisfaction ensure the existence of elements $a_1,\dots, a_n$ of $\fM$ such that $\fM\appmod\varphi'[a_1,\dots,a_n]$;
 hence, $(\fM,a \mid a\in\fM)$ admits an expansion to a model $\widetilde{\fM}$ of $T\cup\{\psi\}$ simply by letting $b_1^{\widetilde{\fM}} \coloneqq a_1$, \dots, $b_n^{\widetilde{\fM}} \coloneqq a_n$.
-By the Compactness Theorem~\ref{thm:compactness}, $T\cup T'$ has a model.
+By the Compactness \cref{thm:compactness}, $T\cup T'$ has a model.
 Let
 	\[
 	(\,\fN, \widetilde{a}, \widetilde{b}\mid {a\in\fM,b\in\fM'})
@@ -5400,7 +5400,7 @@ This proves (\ref{item:elementary-embedding}).
 \end{proof}
 
 
-Essentially the same argument used to prove Corollary~\ref{cor:elementary-equivalence} proves the following result:
+Essentially the same argument used to prove \cref{cor:elementary-equivalence} proves the following result:
 
 \begin{corollary}
 	\label{cor:families-of-equivalent-structures}
@@ -5425,7 +5425,7 @@ then there exist elementary extensions  $\Hat{\fM}\succ\fM$ and $\Hat{\fN}\succ 
 \begin{proof}
 %Fix an infinite cardinal $\kappa$  and  $V$-structures $\FM,\FN$ such that $\FM\equiv\FN$.
 
-Inductively, for every ordinal $n<\omega$, use Corollary~\ref{cor:elementary-equivalence} to construct structures $\fM_n, \fN_n$, and maps $e_n, f_n$, such that
+Inductively, for every ordinal $n<\omega$, use \cref{cor:elementary-equivalence} to construct structures $\fM_n, \fN_n$, and maps $e_n, f_n$, such that
 \begin{enumerate}[(i)]
 \item
 $\fM_0=\fM$, $\fN_0=\fN$,
@@ -5486,8 +5486,8 @@ In fact, if $\fM$ is a model of $T$ and $t$ is a type over a set $A$ of elements
 		\label{item:types-realized-in-extension}
 		The notation $\tp_A(c_1,\dots, c_n)$ is imprecise in the sense that it does not make reference to the structure $\fM$ where the elements $c_1,\dots, c_n$ and the set $A$ ``live''.
 However, since $T$ is a complete $V$-theory by assumption, precise knowledge of $\fM$ is to a large extent unnecessary.
-In fact, if we are given a family $(t_i)_{i\in I}$ of types of $T$ such that, for $i\in I$, the type $t_i$ is over a set of parameters $A_i$ realized in a $V$-structure $\fM_i$, then by Corollary~\ref{cor:families-of-equivalent-structures} there exists a single structure $\fN$ in which all the structures $\fM_i$ are elementary embedded.
-In fact, as we shall see in Proposition~\ref{prop:keisler-shelah} below, given any cardinal $\kappa$ we can fix a ``big'' model $\fN$ of $T$ that is an elementary extension of every $V$-structure $\fM$ with cardinality $\card(\fM)<\kappa$, and such that $\fN$ realizes every type over any of its subsets $A$ with $\card(A)<\kappa$.
+In fact, if we are given a family $(t_i)_{i\in I}$ of types of $T$ such that, for $i\in I$, the type $t_i$ is over a set of parameters $A_i$ realized in a $V$-structure $\fM_i$, then by \cref{cor:families-of-equivalent-structures} there exists a single structure $\fN$ in which all the structures $\fM_i$ are elementary embedded.
+In fact, as we shall see in \cref{prop:keisler-shelah} below, given any cardinal $\kappa$ we can fix a ``big'' model $\fN$ of $T$ that is an elementary extension of every $V$-structure $\fM$ with cardinality $\card(\fM)<\kappa$, and such that $\fN$ realizes every type over any of its subsets $A$ with $\card(A)<\kappa$.
 Furthermore, the model $\fN$ can be taken with the following additional homogeneity property:
 If $c_1,\dots, c_n$ and $c_1',\dots, c_n'$ are elements of $\fN$ and $A$ is a set of elements  of $\fN$ with $\card(A) < \kappa$, then $\tp_A(c_1,\dots, c_n)=\tp_A(c'_1,\dots, c'_n)$ if and only if there is an automorphism of $\fN$ carrying $c_1,\dots, c_n$ to $c'_1,\dots, c'_n$ and fixing $A$ pointwise.
 This allows viewing types as orbits on the big model under the action of its group of automorphisms, and enables a Galois-theoretic viewpoint of complete theories.
@@ -5497,7 +5497,7 @@ It also explains the use of the word ``type''. We will discuss this in more deta
 However:
 		\begin{enumerate}
 			\item
-			The equivalence between (\ref{item:type-elementary-equivalence}) and (\ref{item:type-elementary-extension}) of Proposition~\ref{prop:types} below shows that $\fM$ has an elementary extension where $t$ is realized.
+			The equivalence between (\ref{item:type-elementary-equivalence}) and (\ref{item:type-elementary-extension}) of \cref{prop:types} below shows that $\fM$ has an elementary extension where $t$ is realized.
 			In particular, every elementary extension of $\fM$ has a further elementary extension where $t$ is realized.
 
 			\item $t$ is finitely satisfiable in every model of $\thry(\fM,a \mid a\in A)$.
@@ -5535,12 +5535,12 @@ The following conditions are equivalent.
 \end{proposition}
 
 \begin{proof}
-The equivalence between (\ref{item:type-elementary-equivalence}) and (\ref{item:type-complete}) is given by Corollary~\ref{cor:complete-theories} (by replacing the variables $x_1,\dots, x_n$ with constant symbols not already in $V[A]$).
-The equivalence between (\ref{item:type-complete}) and (\ref{item:type-elementary-extension}) is given by Corollary~\ref{cor:elementary-equivalence}.
+The equivalence between (\ref{item:type-elementary-equivalence}) and (\ref{item:type-complete}) is given by \cref{cor:complete-theories} (by replacing the variables $x_1,\dots, x_n$ with constant symbols not already in $V[A]$).
+The equivalence between (\ref{item:type-complete}) and (\ref{item:type-elementary-extension}) is given by \cref{cor:elementary-equivalence}.
 \end{proof}
 
 \begin{remark}
-	Part (\ref{item:type-complete}) of Proposition~\ref{prop:types} gives a purely syntactic criterion for a given set of formulas to be a type.
+	Part (\ref{item:type-complete}) of \cref{prop:types} gives a purely syntactic criterion for a given set of formulas to be a type.
 \end{remark}
 
 \subsection{Saturated and homogeneous models}
@@ -5550,7 +5550,7 @@ When a structure  $\fM$ has only one sort, this sort is called the \emph{univers
 The \emph{cardinality} of a one-sorted structure is defined as the cardinality of its universe.
 
 
-The observations in Remark~\ref{prop:types} lead naturally to the concept of \textit{saturated structure}:
+The observations in \cref{prop:types} lead naturally to the concept of \textit{saturated structure}:
 
 \begin{definition}
 	Let $\fM$ is a structure with universe $M$ and let $\kappa$ be an infinite cardinal with $\kappa\le\card(M)$.
@@ -5599,7 +5599,7 @@ If $\kappa$ is an infinite cardinal, then every structure has a $\kappa^+$-satur
 
 \begin{proof}
 Fix an infinite cardinal $\kappa$  and  a $V$-structure $\fM$.
-Applying  Remark \ref{rem:types}-(\ref{item:types-realized-in-extension}), we construct inductively, for every ordinal $i<\kappa^+$, a structure $\fM_i$, such that
+Applying  \cref{rem:types}-(\ref{item:types-realized-in-extension}), we construct inductively, for every ordinal $i<\kappa^+$, a structure $\fM_i$, such that
 \begin{enumerate}[(i)]
 \item
 $\fM_0=\fM$,
@@ -5608,7 +5608,7 @@ $\fM_i\prec \fM_{i+1}$ and every type over a subset of the universe of $\fM_i$ o
 \item
 If $j<\kappa^+$ is a limit ordinal, then $\fM_j= \bigcup_{i<j} \fM_i$.
 \end{enumerate}
-It follows from the Elementary Chain Property (Proposition~\ref{prop:elementary-chain}) that $(\fM_i)_{i<\kappa^{+}}$ is an elementary chain, and that $\bigcup_{i<\kappa^+} \fM_i$ is an elementary extension of~$\fM$, which is clearly $\kappa^+$-saturated.
+It follows from the Elementary Chain Property (\cref{prop:elementary-chain}) that $(\fM_i)_{i<\kappa^{+}}$ is an elementary chain, and that $\bigcup_{i<\kappa^+} \fM_i$ is an elementary extension of~$\fM$, which is clearly $\kappa^+$-saturated.
 \end{proof}
 
 
@@ -5637,7 +5637,7 @@ A structure $\fM$ is \emph{strongly $\kappa$-homogeneous} if whenever $\alpha$ i
 	For every infinite cardinal $\kappa$ there exists an ultrafilter $\mathscr{U}$ with the following property: Whenever $\fM$ is a metric structure of cardinality at most $2^\kappa$, the $\mathscr{U}$-ultrapower of $\fM$ is both $\kappa^+$-saturated and $\kappa^+$-homogeneous.
 \end{theorem}
 
-We omit the proof of Theorem \ref{thm:keisler-shelah}.
+We omit the proof of \cref{thm:keisler-shelah}.
 The construction of the ultrafilter is due to S.~Shelah~\cite{Shelah:1971a}, and it builds on ideas of H.~J.~Keisler and K.~Kunen.
 Shelah's epochal proof is for traditional first-order (i.e., discrete structures), but his argument was adapted by C.~W.~Henson and Iovino for structures based on Banach spaces \cite[Corollary 12.3]{Henson-Iovino:2002a}.
 The proof for Banach structures applies to general metric structures without significant changes.
@@ -5664,7 +5664,7 @@ or, alternatively,
 \begin{quote}
 In all models of $T$, formulas involving $f$ can be approximated by $V$-formulas.
 \end{quote}
-Below, we  prove that these two conditions are equivalent (see Theorem~\ref{thm:beth}); but first we must formalize what we mean by ``approximated'' in the preceding statement.
+Below, we  prove that these two conditions are equivalent (see \cref{thm:beth}); but first we must formalize what we mean by ``approximated'' in the preceding statement.
 %\begin{definition}
 %Let $V$ be a vocabulary and let $f$ be a real-valued function symbol, and let $T$ be a $V[f]$-theory.
 %We will say that $f$ is  \emph{implicitly defined by $T$} if every $V$-structure has at most one expansion to a model of $T$, that is, if for every $V$-structure $\FM$:
@@ -5749,7 +5749,7 @@ F=F'.
 
 \end{theorem}
 
-Before proving Theorem~\ref{thm:beth}, let us make the following observation about general topological spaces.
+Before proving \cref{thm:beth}, let us make the following observation about general topological spaces.
 If $Z$ is a topological space, two points $x,y\in Z$ are said to be \emph{topologically indistinguishable}, denoted $x\equiv y$, if every neighborhood of $x$ contains $y$ and every neighborhood of $y$ contains~$x$.
 %Note that if $(x_i)_{i\in I}$ is a family in $X$ and $\mathscr{U}$ is an ultrafilter on $I$, then, whenever  $(x_i)_{i\in I}$ converges to $y$ with respect to $\mathscr{U}$,  $(x_i)_{i\in I}$ converges as well to every point that is topologically indistinguishable from $x$.
 Now, we observe that if $X,Y$ are regular topological spaces with $X$ compact and $g:X\to Y$ is a continuous bijection, then $g$ is a homeomorphism if and only if
@@ -5773,7 +5773,7 @@ Clearly, $g$ is a homeomorphism also.
 
 \begin{proof}
  $(\ref{item:explicit-defn})\Rightarrow(\ref{item:implicit-defn})$:
-This is an immediate consequence of Remark~\ref{rem:explicit-def}.
+This is an immediate consequence of \cref{rem:explicit-def}.
 
 
 As a preliminary step to showing $(\ref{item:implicit-defn})\Rightarrow(\ref{item:explicit-defn})$, we prove the following:
@@ -5788,8 +5788,8 @@ If $V'$ is a vocabulary extending~$V$, and $\fM$, $\fN$ are $V'$-structures admi
 \end{claim}
 
 To prove the claim, let $V'$ extend $V$ and let $\fM$, $\fN$ be elementarily equivalent $V'$-structures admitting expansions $(\fM,F)$, $(\fN,G)$ that are models of~$T$.
-Using Theorem~\ref{thm:keisler-shelah}, fix an ultrafilter $\mathscr{U}$ such that the $\mathscr{U}$-ultrapowers $(\fM)_{\mathscr{U}},(\fN)_{\mathscr{U}}$ are isomorphic $V'$-structures.
-By \Los's Theorem~\ref{thm:los}, the $\scrU$-ultrapower $(\fM,F)_{\scrU} = ((\fM)_{\scrU},(F)_{\scrU})$ is a $V'[f]$-structure elementarily equivalent to~$(\fM,F)$; similarly, $(\fN,G)_{\scrU} = ((\fN)_{\scrU},(G)_{\scrU}) \equiv_{L'[f]}(\fN,G)$.
+Using \cref{thm:keisler-shelah}, fix an ultrafilter $\mathscr{U}$ such that the $\mathscr{U}$-ultrapowers $(\fM)_{\mathscr{U}},(\fN)_{\mathscr{U}}$ are isomorphic $V'$-structures.
+By \Los's \cref{thm:los}, the $\scrU$-ultrapower $(\fM,F)_{\scrU} = ((\fM)_{\scrU},(F)_{\scrU})$ is a $V'[f]$-structure elementarily equivalent to~$(\fM,F)$; similarly, $(\fN,G)_{\scrU} = ((\fN)_{\scrU},(G)_{\scrU}) \equiv_{L'[f]}(\fN,G)$.
 Let $\mathscr{I}$ be a $V'$-isomorphism from $(\fM)_{\mathscr{U}}$ into $(\fN)_{\mathscr{U}}$.
 \emph{A fortiori,} $\mathscr{I}$ is a $V$-isomorphism between (the $V$-reducts of)~$(\fM)_{\scrU}$ and~$(\fN)_{\scrU}$.
 By~(\ref{item:implicit-defn}), we have $\mathscr{I}((F)_{\mathscr{U}})=(G)_{\mathscr{U}}$; thus, $(\fM,F)_{\mathscr{U}}$ and $(\fN,G)_{\mathscr{U}}$ are isomorphic $V'[f]$-structures, so $(\fM,F)\equiv_{L'[f]}(\fN,G)$. This proves the claim.
@@ -5809,7 +5809,7 @@ A basis for the closed classes of~$\mathscr{C}$ is given by all subclasses of th
 in other words, the closed subclasses of $\mathscr{C}$ are those of the form $\Mod_{\mathscr{C}}(\Phi)$, where $\Phi$ is a $V'[f]$-theory.
 Similarly, the closed subclasses of $\mathscr{D}$ are those of the form $\Mod_{\mathscr{D}}(\Phi)$, where $\Phi$ is a $V'$-theory.%
 \footnote{Later, in Subsection~\ref{sec:spaces-types}, we shall refer to this as the \emph{logic topology}.}
-Both $\mathscr{C}$ and $\mathscr{D}$ are regular, with $\mathscr{C}$ compact, by Remark~\ref{rem:topology}, and the surjection $g$ is clearly continuous.
+Both $\mathscr{C}$ and $\mathscr{D}$ are regular, with $\mathscr{C}$ compact, by \cref{rem:topology}, and the surjection $g$ is clearly continuous.
 
 Let $\fN\in\mathscr{D}$, so $\fN$ is the $V'$-reduct of some model $(\fN,F)\appmod T'_r$.
 Let $\fM = \fN\restriction L$ be the $V$-reduct of~$\fN$.
@@ -5833,7 +5833,7 @@ Since the interpretation of $\overline{c}$ is arbitrary in $B_{\fM}(r)$, the sch
 \begin{definition}
 \label{def:definable-real-valued}
 If $V$ is a vocabulary, $f$ is a real-valued function symbol, and $T$ is a uniform $V[f]$-theory,
-we will say that $f$ is $T$-\emph{definable} in $V$ if it satisfies the equivalent conditions of Theorem~\ref{thm:beth}.
+we will say that $f$ is $T$-\emph{definable} in $V$ if it satisfies the equivalent conditions of \cref{thm:beth}.
 When $V$ is given by the context, we may simply say that $f$ is $T$-\emph{definable};
 furthermore, if $V$ and $T$ are given by the context, we may say that $f$ is ``definable''.
 \end{definition}
@@ -5881,12 +5881,12 @@ Therefore,~(\ref{item:continuous-definable}) follows from the Stone-Weierstrass 
 \begin{definition}
 \label{def:definable}
 If $V$ is a vocabulary, $f$ is an $n$-ary function symbol (not necessarily real-valued), and $T$ is a uniform $V[f]$-theory,
-we will say that $f$ is $T$-\emph{definable in~$V$} if the real-valued function $d(f(x_1,\dots, x_n),y)$ is $T$-definable in $V$ in the sense of Definition~\ref{def:definable-real-valued}.
-As in Definition~\ref{def:definable-real-valued}, if $V$ or $T$ are given by the context, we may omit them from the nomenclature.
+we will say that $f$ is $T$-\emph{definable in~$V$} if the real-valued function $d(f(x_1,\dots, x_n),y)$ is $T$-definable in $V$ in the sense of \cref{def:definable-real-valued}.
+As in \cref{def:definable-real-valued}, if $V$ or $T$ are given by the context, we may omit them from the nomenclature.
 \end{definition}
 
 \begin{remark}
-It is not difficult to verify that, if $f$ is a real-valued function symbol, there is no conflict between the notions of definability for $f$ given by Definitions~\ref{def:definable-real-valued} and~\ref{def:definable}.
+It is not difficult to verify that, if $f$ is a real-valued function symbol, there is no conflict between the notions of definability for $f$ given by \cref{def:definable-real-valued,def:definable}.
 (This is because if $f$ is $n$-ary and $F$ is an interpretation of $f$, then for any real number $r$,  $d(F(a_1,\dots, a_n),b)=r$ if and only if $b = \pm F(a_1,\dots, a_n)$.)
 \end{remark}
 
@@ -5895,10 +5895,10 @@ It is not difficult to verify that, if $f$ is a real-valued function symbol, the
 \label{sec:spaces-types}
 
 In this section, $T$ will denote a fixed complete $V$-theory and we will denote by $\mathscr{T}$ the set of types that are realized in a model of~$T$.
-Note that, if $(t_i)_{i\in I}$ is a family of types in $\mathscr{T}$ and $t_i$ is realized in $\fM_i$ then, by Corollary~\ref{cor:families-of-equivalent-structures}, there exists a model $\fN$ of $T$ such that $\fM_i\prec \fN$ for every $i\in I$.
+Note that, if $(t_i)_{i\in I}$ is a family of types in $\mathscr{T}$ and $t_i$ is realized in $\fM_i$ then, by \cref{cor:families-of-equivalent-structures}, there exists a model $\fN$ of $T$ such that $\fM_i\prec \fN$ for every $i\in I$.
 Thus, each $t_i$ is realized in $\fN$.
 
-By Remark~\ref{rem:types}-(\ref{item:types-realized-in-extension}), if $t=t(x_1,\dots, x_n)$ is a type in $\mathscr{T}$, then there exists a positive rational $r$ such that
+By \cref{rem:types}-(\ref{item:types-realized-in-extension}), if $t=t(x_1,\dots, x_n)$ is a type in $\mathscr{T}$, then there exists a positive rational $r$ such that
 \[
 \exists_r x_1\dots \exists_r x_n\, \bigwedge_{\varphi\in\Phi}\varphi(x_1,\dots, x_n) \in t,
 \qquad
@@ -5916,33 +5916,33 @@ We shall always regard $\mathscr{T}$ as a topological space via the logic topolo
 
 \begin{remark}
 \label{rem:compactness-and-types}
-The Compactness Theorem~\ref{thm:compactness} says exactly that $\mathscr{T}_n^{(r)}$ is compact for each $n$ and~$r$.
+The Compactness \cref{thm:compactness} says exactly that $\mathscr{T}_n^{(r)}$ is compact for each $n$ and~$r$.
 \end{remark}
 
 
 The complement of a set of the form $[\varphi]$ is not necessarily of the same form;
-however,  if $t\in \mathscr{T}$, by Proposition~\ref{prop:types}-(\ref{item:weak-negation}),  we have $t\notin [\varphi]$ if and only if there exists $\psi\in t$ and $\psi'>\psi$ such that $t\in[\psi']\subseteq[\varphi]^c$.
+however,  if $t\in \mathscr{T}$, by \cref{prop:types}-(\ref{item:weak-negation}),  we have $t\notin [\varphi]$ if and only if there exists $\psi\in t$ and $\psi'>\psi$ such that $t\in[\psi']\subseteq[\varphi]^c$.
 Thus, for $t\in \mathscr{T}$, the sets of the form $[\psi']$ where $\psi'$ is an approximation of a formula $\psi\in t$ form a local neighborhood base around $t$.
 
 Let $\varphi(x_1,\dots,x_n)$ be the formula $\exists_r x_1\dots \exists_r x_n\, \bigwedge_{1\le i \le n} x_i=x_i$. Then, $[\varphi]=\mathscr{T}_n^{(r)}$.
 Every type contains a formula $\varphi$ of this kind, for some $n$ and some $r$. Therefore, the space $\mathscr{T}$ is locally compact.
 
 Let $A$ be a set of parameters, i.e., $A$ is a set of elements of some fixed model $\fM$ of $T$. If $(t_i)_{i\in I}$ is a family in $\mathscr{T}_n^{(r)}$ such that $t_i$ is a type over $A$ for each $i\in I$ and $\mathscr{U}$ is an ultrafilter of $I$, then, by the compactness of $\mathscr{T}_n^{(r)}$, the limit  $\mathscr{U}\lim_{i} t_i$ is a type over $A$.
-Conversely, if $t(\bar{x})$ is a type over $A$, since $t$ is finitely satisfiable in $\fM$ (see Definition~\ref{def:fin-satisf}), there exists a family $(\bar{a}_i)_{i\in I}$ in $\fM$ and an ultrafilter $\mathscr{U}$ on $I$ such that $t=\mathscr{U}\lim_{i} \tp_A(\bar{a}_i)$. Thus, types over  model $\fM$ can be viewed as ultrafilter limits of types realized within $\fM$.
+Conversely, if $t(\bar{x})$ is a type over $A$, since $t$ is finitely satisfiable in $\fM$ (see \cref{def:fin-satisf}), there exists a family $(\bar{a}_i)_{i\in I}$ in $\fM$ and an ultrafilter $\mathscr{U}$ on $I$ such that $t=\mathscr{U}\lim_{i} \tp_A(\bar{a}_i)$. Thus, types over  model $\fM$ can be viewed as ultrafilter limits of types realized within $\fM$.
 
 Let $\kappa$ be a cardinal that is both larger than the cardinality of every model of $T$ needed in our proofs and larger than the cardinality of any indexed family of types mentioned.
-Let now $\mathfrak{C}$ be a $\kappa$-saturated, $\kappa$-homogeneous model of $T$ (see Theorem~\ref{thm:keisler-shelah}).
+Let now $\mathfrak{C}$ be a $\kappa$-saturated, $\kappa$-homogeneous model of $T$ (see \cref{thm:keisler-shelah}).
 Then we can assume that:
 
 \begin{enumerate}
 \item
-Every model of $T$ occurs as an elementary submodel of $\mathfrak{C}$ (see Proposition~\ref{prop:keisler-shelah}).
+Every model of $T$ occurs as an elementary submodel of $\mathfrak{C}$ (see \cref{prop:keisler-shelah}).
 \item
 Every type (over a set of parameters is a model of $T$)  is realized in $\mathfrak{C}$.
 \item
 If $(a_1,\dots, a_n)$ and $(b_1,\dots, b_n)$ are $n$-tuples of elements of $\mathfrak{C}$ such that $\tp_A(a_1,\dots, a_n)=\tp_A(b_1,\dots, b_n)$, then there exists an automorphism $f$ of $\mathfrak{C}$ such that $f(a_i)=b_i$ for $i=1,\dots, n$.
 \item
-A real-valued function $f$ is definable in $T$ over a set of parameters $A$ if and only if $f$ is fixed by every automorphism of $\mathfrak{C}$ that fixes $A$ pointwise fixes the graph of $f$. (See the remarks preceding Corollary~\ref{cor:definability-closure-properties}.)
+A real-valued function $f$ is definable in $T$ over a set of parameters $A$ if and only if $f$ is fixed by every automorphism of $\mathfrak{C}$ that fixes $A$ pointwise fixes the graph of $f$. (See the remarks preceding \cref{cor:definability-closure-properties}.)
 \end{enumerate}
 We shall henceforth refer to $\mathfrak{C}$ as a \emph{big model} or a \emph{monster model} for $T$. Monster models are a time-saving device, and what makes them convenient  are the properties listed above. For each complete theory considered, we will always work within a fixed monster model. The particular choice of monster model will be irrelevant for our discussions since any two such models can be  embedded elementarily in a common one. Thus, we may informally refer to ``the'' monster model of $T$.
 
@@ -6269,7 +6269,7 @@ Given $f,g$ in $\scrF_G$, we have $E(f,g)$ if and only if at least one of the fo
 \end{proof}
 
 We will see that the equivalence classes of $E$ over the set
-$\scrF_G$ act as “observables" in a partial algebra (Definition~\ref{def:partial-algebra}), given some natural interpretations of the relations and operations $\com$, $+$, $\circ$, $\cdot$, and $\mathbb{1}$.
+$\scrF_G$ act as “observables" in a partial algebra (\cref{def:partial-algebra}), given some natural interpretations of the relations and operations $\com$, $+$, $\circ$, $\cdot$, and $\mathbb{1}$.
 The rest of this section will be dedicated to defining these interpretations for a fixed graph and showing that the structure does indeed satisfy the properties of a partial algebra.
 
 \begin{definition}\label{def:graph-observables}
@@ -6439,7 +6439,7 @@ Therefore, $q\com\mathbb{1}$.
 
 We will now show that the commeasurability relation is preserved under the operations $+$, $\circ$, and $\cdot$.
 
-\begin{proof}[Proof that $\mathfrak{Q}$ satisfies property 2) of Definition~\ref{def:partial-algebra}] Let $q_1,q_2,q_3$ be observables that are pairwise commeasurable.
+\begin{proof}[Proof that $\mathfrak{Q}$ satisfies property 2) of \cref{def:partial-algebra}] Let $q_1,q_2,q_3$ be observables that are pairwise commeasurable.
   Since we have three commeasurability relations up to symmetry ($q_1\com q_2$, $q_2\com q_3$, and $q_3\com q_1$), for any two commeasurable observables, there exist pairs of functions with a shared domain.
   We will call these functions $f_1,f_2,g_2,g_3,h_1,$ and $h_3$ with the following properties (summarized in the table below).
   A subscript of $i$ indicates that the function is in the equivalence class $q_i$.
@@ -6502,7 +6502,7 @@ We will now show that the commeasurability relation is preserved under the opera
 We will now show that any three pairwise commeasurable observables $q_1,q_2,q_3\in Q_{\scrG}$ generate (through addition, multiplication, and scalar multiplication) a commutative algebra over $\RR$.
 
 %The following proof is incomplete
-\begin{proof}[Proof that $\mathfrak{Q}$ satisfies property 3) of Definition~\ref{def:partial-algebra}]
+\begin{proof}[Proof that $\mathfrak{Q}$ satisfies property 3) of \cref{def:partial-algebra}]
 
 \end{proof}
 
@@ -6594,7 +6594,7 @@ Now we define a notion of when two expressions in $P_n$ are equal in a partial a
       \]
 
       Let $\bar{q}$ be any element of $D_{\varphi,n}^{\fA}\cap D_{\psi,n}^{\fA}$.
-      Then $q_i\com q_j$, so by property 3) of Definition~\ref{def:partial-algebra}, $q_i$ and $q_j$ generate a commutative algebra.
+      Then $q_i\com q_j$, so by property 3) of \cref{def:partial-algebra}, $q_i$ and $q_j$ generate a commutative algebra.
       Hence,
       \[
         \varphi_n^{\fA}(\bar{q}) = q_i+q_j = q_j+q_i = \psi_n^{\fA}(\bar{q}).
@@ -6614,7 +6614,7 @@ Now we define a notion of when two expressions in $P_n$ are equal in a partial a
       D_{\psi,n}^{\fA}                         & =\{\bar{q}\in A^n\,\colon\,q_i\com q_j\text{ and }(q_i+q_j)\com q_k\}                                            \\
       D_{\varphi,n}^{\fA}\cap D_{\psi,n}^{\fA} & =\left\{\bar{q}\in A^n\,\colon\,q_i\com q_j,\,q_j\com q_k,q_i\com(q_j+q_k),\text{ and }(q_i+q_j)\com q_k\right\}
       \end{align*}
-      Note that $q_i\com q_j$ implies that $q_i\com(-1\cdot q_j)$ by property 2) of the definition of a partial algebra (Definition~\ref{def:partial-algebra}).
+      Note that $q_i\com q_j$ implies that $q_i\com(-1\cdot q_j)$ by property 2) of the definition of a partial algebra (\cref{def:partial-algebra}).
       Also, $q_j\com q_k$ implies that $q_j\com(q_j+q_k)$ and $-1\cdot q_j\com(q_j+q_k)$.
       Since we also have that $q_i\com(q_j+q_k)$, we conclude that $q_i,(-1\cdot q_j),$ and $(q_j+q_k)$ are pairwise commeasurable.
       Commeasurability of these elements is preserved under $+$, so we have that $q_i\com((-1\cdot q_j)+q_j+q_k)$, or simply $q_i\com q_k$.
@@ -6645,7 +6645,7 @@ Now we define a notion of when two expressions in $P_n$ are equal in a partial a
     Hence, it will be possible to add elements $q_1,q_2,q_3,$ and $q_4$ in different orders and obtain different values.
 
     \begin{proof}
-      We will consider the 11-vertex, triangular graph $\scrG=(G,R)$ shown in Figure~\ref{fig:triangular-graph} and the set of observables $Q_{\scrG}$ on that graph.
+      We will consider the 11-vertex, triangular graph $\scrG=(G,R)$ shown in \cref{fig:triangular-graph} and the set of observables $Q_{\scrG}$ on that graph.
       Let $\fQ=(Q_{\scrG},\com,+,\circ,\cdot,\mathbb{1})$.
       We present four distinct real-valued functions $f_1,f_2,f_3,f_4\in\scrF_G$ which are representatives of four equivalence classes (observables), which we will call $q_1,q_2,q_3,$ and $q_4$, respectively.
       For the sake of clarity and legibility, we will use a two-line notation for functions.
@@ -6876,7 +6876,7 @@ q_1\leftrightarrow q_2 & \coloneq(q_1\to q_2)\land(q_2\to q_1)
   Then $\fB$ is a partial Boolean algebra.
 
   \begin{proof}[Proof that the set of idempotent elements of $\fA$ is a partial Boolean algebra] The characteristics of $B,\venus^{\fB},\lor,$ and $\neg$ satisfy the basic requirements of a partial Boolean algebra.
-    It remains to be shown that $\mathbb{0}^{\fB}$ and $\mathbb{1}^{\fB}$ are elements of $B$, and that properties (1)-(3) in Definition~\ref{def:partial-boolean-algebra} hold.
+    It remains to be shown that $\mathbb{0}^{\fB}$ and $\mathbb{1}^{\fB}$ are elements of $B$, and that properties (1)-(3) in \cref{def:partial-boolean-algebra} hold.
 
     To show that (1) holds, note that we already have $q\com^{\fA}\mathbb{1}^{\fA}$ for all $q\in A$.
     Therefore, we also have $q\com^{\fB}\mathbb{1}^{\fB}$ for all $q\in B$ because $\mathbb{1}^{\fB}=\mathbb{1}^{\fA}$ and $\com^{\fB}$ is  restriction of $\com^{\fA}$ to  $B\times B\subseteq A\times A$.
@@ -6954,8 +6954,8 @@ We present two more examples of partial Boolean algebras.
     It is clear that for any $a\in B$, $a\com\mathbb{0}^{\fB}$ and $a\com\mathbb{1}^{\fB}$.
 
     For $a,b,c\in B$ that are pairwise commeasurable, property~\ref{item:pba-pairwise-property} guarantees that they belong to a common Boolean algebra $\fB_k$ that is closed under its logical operations $\lor^{\fB_k}$ and $\neg^{\fB_k}$.
-    Therefore, $a\lor^{\fB}b=a\lor^{\fB_k}b\in B_k$ and $\neg^{\fB}a=\neg^{\fB_k}a\in B_k$, so $(a\lor^{\fB}b)\com c$ and $(\neg^{\fB}a)\com b$, satisfying property~\ref{item:pba-com-preserved} of Definition~\ref{def:partial-boolean-algebra}.
-    Furthermore, the sub-Boolean algebra of $\fB_k$ generated by $a,b,c$ is a Boolean algebra, so property~\ref{item:pba-boolean-algebra} of Definition~\ref{def:partial-boolean-algebra} is satisfied.
+    Therefore, $a\lor^{\fB}b=a\lor^{\fB_k}b\in B_k$ and $\neg^{\fB}a=\neg^{\fB_k}a\in B_k$, so $(a\lor^{\fB}b)\com c$ and $(\neg^{\fB}a)\com b$, satisfying property~\ref{item:pba-com-preserved} of \cref{def:partial-boolean-algebra}.
+    Furthermore, the sub-Boolean algebra of $\fB_k$ generated by $a,b,c$ is a Boolean algebra, so property~\ref{item:pba-boolean-algebra} of \cref{def:partial-boolean-algebra} is satisfied.
 
   \end{enumerate}
 \end{examples}

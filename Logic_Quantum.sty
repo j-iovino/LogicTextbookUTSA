@@ -121,6 +121,12 @@
 \declaretheoremstyle[name=Remarks,]{exsty}
 \declaretheorem[style=exsty,numberlike=theorem]{remarks}
 
+% \cref names for the environments di-cleveref does not know (it covers theorem, definition, example, remark, ...);
+% thmtools' numberlike=theorem uses aliascnt, so each environment prints its own name.
+\crefname{claim}{Claim}{Claims}\Crefname{claim}{Claim}{Claims}
+\crefname{examples}{Examples}{Examples}\Crefname{examples}{Examples}{Examples}
+\crefname{remarks}{Remarks}{Remarks}\Crefname{remarks}{Remarks}{Remarks}
+
 \usepackage{tikzsymbols}
 \renewcommand\qedsymbol{\Smiley[1.7][LightPurple]}
 
