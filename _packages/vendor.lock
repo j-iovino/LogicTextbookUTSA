@@ -1,0 +1,10 @@
+# vendor.lock — provenance pins for vendored shared files ("poor man's submodule")
+#
+# Columns:  <local file>  <upstream repo>  <commit>
+# The .sty files here are PRISTINE copies — do NOT edit them (see _DO_NOT_EDIT_FILES_IN_THIS_DIRECTORY.md).
+# references.bib (repo root) is vendored but EDITABLE; the pin records the last sync.
+
+di-alphabets.sty       eduenez/LaTeX-shared-files  ab85c0f
+di-logic.sty           eduenez/LaTeX-shared-files  50494b7
+di-cleveref.sty        eduenez/LaTeX-shared-files  b997f82
+references.bib         eduenez/math-bibliography   13acd26
