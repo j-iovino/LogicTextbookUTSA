@@ -1,0 +1,163 @@
+%% Logic_Quantum.sty — project style file for Logic_Quantum.tex (scrartcl)
+%%
+%% SOLE package loaded by the main file: (1) this document's own packages, (2) shared packages
+%% vendored in _packages/ (pristine copies pinned in _packages/vendor.lock — DO NOT edit them
+%% there), then (3) everything specific to this document. The look of the document is unchanged
+%% from the pre-template version (thmtools theorem styles in coloured boxes, 1.2 line spacing).
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Logic_Quantum}[2026/10/13 Logic_Quantum project preamble]
+
+% ═══════════════════════════════════════════════════════════════════════════
+%% Packages
+% ═══════════════════════════════════════════════════════════════════════════
+
+\usepackage{amsmath, amssymb, amsfonts, amsthm, wasysym}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{datetime}
+
+\usepackage{geometry}
+\usepackage[pdftex]{graphicx}
+
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{dirtytalk}
+\usepackage{framed}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tcolorbox}
+\usepackage[shortlabels]{enumitem}
+\usepackage{mathbbol}
+\usepackage{mathtools}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
+\DeclareMathOperator{\Av}{Av }
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\Th}{Th}
+\DeclareMathOperator{\tp}{tp}
+\DeclareMathOperator{\sub}{sub}
+\DeclareMathOperator{\dom}{dom}
+
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+
+\newcommand{\FA}{\mathfrak{A}}
+\newcommand{\FB}{\mathfrak{B}}
+\newcommand{\FK}{\mathfrak{K}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\FN}{\mathfrak{N}}
+\newcommand{\FQ}{\mathfrak{Q}}
+
+\newcommand{\SA}{\mathscr{A}}
+\newcommand{\SB}{\mathscr{B}}
+\newcommand{\SF}{\mathscr{F}}
+\newcommand{\SG}{\mathscr{G}}
+\newcommand{\SL}{\mathscr{L}}
+\newcommand{\SN}{\mathscr{N}}
+\newcommand{\SP}{\mathscr{P}}
+\newcommand{\SU}{\mathscr{U}}
+\newcommand{\SV}{\mathscr{V}}
+
+\newcommand{\BR}{\mathbb{R}}
+
+\newcommand{\com}{\mathrel{\venus}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+  \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand{\circone}{\circled{$\mathbb{1}$}}
+
+\newcommand{\aore}{\forall \vee \exists}
+
+\colorlet{LightPurple}{White!80!Periwinkle}
+\colorlet{LightPink}{White!80!Lavender}
+\colorlet{LightBlue}{White!90!Cerulean}
+\colorlet{LightGreen}{White!90!Green}
+\colorlet{LighterGreen}{White!94!Green}
+\colorlet{LightYellow}{White!80!Goldenrod}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+
+% ═══════════════════════════════════════════════════════════════════════════
+%% Vendored shared packages  (pristine copies in _packages/; DO NOT edit there)
+% ═══════════════════════════════════════════════════════════════════════════
+%%% Vendored: eduenez/LaTeX-shared-files/di-cleveref.sty @ b997f82
+\usepackage{di-cleveref}         % \cref names (Theorem, Section, ...), loaded after hyperref and BEFORE the theorem environments
+
+% ═══════════════════════════════════════════════════════════════════════════
+%% Project-specific additions  (EDIT HERE)
+% ═══════════════════════════════════════════════════════════════════════════
+
+% ─── Theorem environments (thmtools; numberlike=theorem shares the counter through aliascnt) ───
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}
+{colback=LightPurple}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}
+{colback=LightPurple}
+
+\declaretheoremstyle[name=Corollary,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{corollary}
+\tcolorboxenvironment{corollary}
+{colback=LightPurple}
+
+\declaretheoremstyle[name=Claim,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{claim}
+\tcolorboxenvironment{claim}
+{colback=LightPurple}
+
+\declaretheoremstyle[name=Lemma,]{lemsty}
+\declaretheorem[style=lemsty,numberlike=theorem]{lemma}
+\tcolorboxenvironment{lemma}
+{colback=LightPurple}
+
+\declaretheoremstyle[name=Definition,]{defnsty}
+\declaretheorem[style=defnsty,numberlike=theorem]{definition}
+\tcolorboxenvironment{definition}
+{colback=LightPink}
+
+\declaretheoremstyle[name=Notation,]{nosty}
+\declaretheorem[style=nosty,numberlike=theorem]{notation}
+\tcolorboxenvironment{notation} 
+{colback=LightBlue}
+
+\declaretheoremstyle[name=Historical note,]{nosty}
+\declaretheorem[style=nosty, numbered=no]{history}
+\tcolorboxenvironment{history} 
+{colback=LightGreen}
+
+\declaretheoremstyle[name=Example,]{exsty}
+\declaretheorem[style=exsty,numberlike=theorem]{example}
+
+\declaretheoremstyle[name=Examples,]{exsty}
+\declaretheorem[style=exsty,numberlike=theorem]{examples}
+
+\declaretheoremstyle[name=Remark,]{exsty}
+\declaretheorem[style=exsty,numberlike=theorem]{remark}
+
+\declaretheoremstyle[name=Remarks,]{exsty}
+\declaretheorem[style=exsty,numberlike=theorem]{remarks}
+
+\usepackage{tikzsymbols}
+\renewcommand\qedsymbol{\Smiley[1.7][LightPurple]}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+

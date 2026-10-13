@@ -1,151 +1,24 @@
+% Logic_Quantum.tex — Lecture Notes in Logic, with Applications to Quantum Foundations
+%
+% Compile: latexmk (uses latexmkrc at the repository root) or
+%          pdflatex Logic_Quantum; bibtex Logic_Quantum; pdflatex ...; pdflatex ...
+% Engine:  pdfLaTeX
+
 \documentclass{scrartcl}
 
-\usepackage{amsmath, amssymb, amsfonts, amsthm, wasysym}
-\usepackage{mathrsfs}
-\usepackage{bbm}
-\usepackage{datetime}
+% ═════════════════════════════════════════════════════════════════════════════
+% ┃ ALL \usepackage, macro, and environment declarations live in                ┃
+% ┃ Logic_Quantum.sty (loaded below), which loads this document's packages,      ┃
+% ┃ the vendored shared packages from _packages/, and then this document's       ┃
+% ┃ additions. Do NOT add \usepackage / \newcommand / \newtheorem here. This     ┃
+% ┃ preamble carries ONLY the document class, that one style package, and        ┃
+% ┃ semantic metadata. See STYLE.md.                                             ┃
+% ═════════════════════════════════════════════════════════════════════════════
+% Where the vendored shared .sty files live (makes plain pdflatex work without TEXINPUTS).
+\makeatletter\def\input@path{{../_packages/}{_packages/}}\makeatother
+\usepackage{Logic_Quantum}
 
-\usepackage{geometry}
-\usepackage[pdftex]{graphicx}
-
-\usepackage{thmtools}
-\usepackage{graphicx}
-\usepackage{setspace}
-\usepackage{geometry}
-\usepackage{float}
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{dirtytalk}
-\usepackage{framed}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tcolorbox}
-\usepackage[shortlabels]{enumitem}
-\usepackage{mathbbol}
-\usepackage{mathtools}
-
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric}
-
-\DeclareMathOperator{\Av}{Av }
-\DeclareMathOperator{\Mod}{Mod}
-\DeclareMathOperator{\Th}{Th}
-\DeclareMathOperator{\tp}{tp}
-\DeclareMathOperator{\sub}{sub}
-\DeclareMathOperator{\dom}{dom}
-
-\renewcommand{\phi}{\varphi}
-\renewcommand{\epsilon}{\varepsilon}
-
-\newcommand{\FA}{\mathfrak{A}}
-\newcommand{\FB}{\mathfrak{B}}
-\newcommand{\FK}{\mathfrak{K}}
-\newcommand{\FM}{\mathfrak{M}}
-\newcommand{\FN}{\mathfrak{N}}
-\newcommand{\FQ}{\mathfrak{Q}}
-
-\newcommand{\SA}{\mathscr{A}}
-\newcommand{\SB}{\mathscr{B}}
-\newcommand{\SF}{\mathscr{F}}
-\newcommand{\SG}{\mathscr{G}}
-\newcommand{\SL}{\mathscr{L}}
-\newcommand{\SN}{\mathscr{N}}
-\newcommand{\SP}{\mathscr{P}}
-\newcommand{\SU}{\mathscr{U}}
-\newcommand{\SV}{\mathscr{V}}
-
-\newcommand{\BR}{\mathbb{R}}
-
-\newcommand{\com}{\mathrel{\venus}}
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-  \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
-\newcommand{\circone}{\circled{$\mathbb{1}$}}
-
-\newcommand{\aore}{\forall \vee \exists}
-
-
-\colorlet{LightPurple}{White!80!Periwinkle}
-\colorlet{LightPink}{White!80!Lavender}
-\colorlet{LightBlue}{White!90!Cerulean}
-\colorlet{LightGreen}{White!90!Green}
-\colorlet{LighterGreen}{White!94!Green}
-\colorlet{LightYellow}{White!80!Goldenrod}
-
-\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
-
-\declaretheoremstyle[name=Theorem,]{thmsty}
-\declaretheorem[style=thmsty,numberwithin=section]{theorem}
-\tcolorboxenvironment{theorem}
-{colback=LightPurple}
-
-\declaretheoremstyle[name=Proposition,]{prosty}
-\declaretheorem[style=prosty,numberlike=theorem]{proposition}
-\tcolorboxenvironment{proposition}
-{colback=LightPurple}
-
-
-\declaretheoremstyle[name=Corollary,]{prosty}
-\declaretheorem[style=prosty,numberlike=theorem]{corollary}
-\tcolorboxenvironment{corollary}
-{colback=LightPurple}
-
-
-\declaretheoremstyle[name=Claim,]{prosty}
-\declaretheorem[style=prosty,numberlike=theorem]{claim}
-\tcolorboxenvironment{claim}
-{colback=LightPurple}
-
-\declaretheoremstyle[name=Lemma,]{lemsty}
-\declaretheorem[style=lemsty,numberlike=theorem]{lemma}
-\tcolorboxenvironment{lemma}
-{colback=LightPurple}
-
-\declaretheoremstyle[name=Definition,]{defnsty}
-\declaretheorem[style=defnsty,numberlike=theorem]{definition}
-\tcolorboxenvironment{definition}
-{colback=LightPink}
-
-
-\declaretheoremstyle[name=Notation,]{nosty}
-\declaretheorem[style=nosty,numberlike=theorem]{notation}
-\tcolorboxenvironment{notation} 
-{colback=LightBlue}
-
-\declaretheoremstyle[name=Historical note,]{nosty}
-\declaretheorem[style=nosty, numbered=no]{history}
-\tcolorboxenvironment{history} 
-{colback=LightGreen}
-
-
-\declaretheoremstyle[name=Example,]{exsty}
-\declaretheorem[style=exsty,numberlike=theorem]{example}
-
-\declaretheoremstyle[name=Examples,]{exsty}
-\declaretheorem[style=exsty,numberlike=theorem]{examples}
-
-\declaretheoremstyle[name=Remark,]{exsty}
-\declaretheorem[style=exsty,numberlike=theorem]{remark}
-
-\declaretheoremstyle[name=Remarks,]{exsty}
-\declaretheorem[style=exsty,numberlike=theorem]{remarks}
-
-
-
-\usepackage{tikzsymbols}
-\renewcommand\qedsymbol{\Smiley[1.7][LightPurple]}
-
-\setstretch{1.2}
-\geometry{
-    textheight=9in,
-    textwidth=5.5in,
-    top=1in,
-    headheight=12pt,
-    headsep=25pt,
-    footskip=30pt
-}
-
-\begin{document}
-
+% ─── Document Metadata ──────────────────────────────────────────────────────
 \title{ \normalsize \textsc{}
 		\\ [2.0cm]
 		\HRule{1.5pt} \\
@@ -157,6 +30,8 @@
 \author{Lecture notes coordinated by Olivia Aubone\\
 {Faculty advisors: Eduardo Dueñez, José Iovino}\\
 }
+
+\begin{document}
 
 \maketitle
 \newpage
@@ -1204,8 +1079,7 @@ This identification has the advantage that it allows us to view types as infinit
 
 
 \begin{example}
-\textbf{Nonstandard models of Arithmetic}.
-\label{E:nonstandard arithmetic}
+\textbf{Nonstandard models of Arithmetic}.\label{E:nonstandard arithmetic}
 Let $V$ be the standard vocabulary for Peano arithmetic;
 \[
 V= \{ +,\cdot, 0,1,< \}.
@@ -1448,8 +1322,7 @@ The process of passing from any given structure to a richer elementary superstru
 \end{example}
 
 \begin{example}
-\textbf{Nonstandard extensions of the reals and infinitesimal calculus}.
-\label{E:nonstandard analysis}
+\textbf{Nonstandard extensions of the reals and infinitesimal calculus}.\label{E:nonstandard analysis}
 Arguing as in the previous example, but with the structure
 \[
 \mathfrak{R}=(\mathbb{R}, +,\cdot,< ,r)_{r\in\mathbb{R}}
@@ -1923,7 +1796,7 @@ even for a single sentence $\theta$, the notion of  $\FM\models \theta$  is non 
  
 \end{enumerate}
 
-The Completeness Theorem of first-order logic (Theorem~\ref{T:completeness} below) answers the preceding question in the affirmative, i.e., if \label{T:completeness} $T\models\phi$, then there is a finitary proof of $\phi$ from $T$.  Of course, before proving this theorem, we need a formal definition of the concept of ``proof''. This is the content of the next section.
+The Completeness Theorem of first-order logic (Theorem~\ref{T:completeness} below) answers the preceding question in the affirmative, i.e., if\label{T:completeness} $T\models\phi$, then there is a finitary proof of $\phi$ from $T$.  Of course, before proving this theorem, we need a formal definition of the concept of ``proof''. This is the content of the next section.
 
 \subsection{The mathematical definitions of ``proof'' and ``theorem''}
 \label{S:Proof}
