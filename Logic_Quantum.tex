@@ -31,6 +31,9 @@
 {Faculty advisors: Eduardo Dueñez, José Iovino}\\
 }
 
+%#
+%# DOCUMENT: \normalsize \textsc{} \\ [2.0cm] \HRule{1.5pt} \\ \LARGE \textbf{\uppercase{Lecture Notes in Logic,\\ with Applications to Quantum Foundations} \HRule{2.0pt} \\ [0.6cm] \LARGE{} \vspace*{10\baselineskip}}
+%#
 \begin{document}
 
 \maketitle
@@ -39,9 +42,11 @@
 \tableofcontents
 \newpage
 
-% ------------------------------------------------------------------------------
-
 \setcounter{section}{-1}
+
+%#
+%## SECTION: Preface: Propositional logic
+%#
 \section{Preface: Propositional logic}
 
 In this section, $\mathscr{S}$ will denote a fixed set of syntactic symbols that we will call \emph{sentence symbols}.
@@ -96,9 +101,15 @@ $(\alpha\land\beta)$ and $(\alpha\to\beta)$ as abbreviations of $\neg(\neg\alpha
   We call $\alpha$ a \emph{propositional tautology} if $v(\alpha) = 1$ for every assignment $v_0,\dots, v_n$.
 \end{definition}
 
+%#
+%## SECTION: First-Order Logic
+%#
 \section{First-Order Logic}
 \label{sec:logic}
 
+%#
+%### SUBSECTION: Structures
+%#
 \subsection{Structures}
 
 \begin{definition}
@@ -153,6 +164,9 @@ It should be clear how our results extend to multisorted contexts.
   and we need to emphasize that the universe of $\mathfrak{M}$ is $M$ in a context where it is not necessary to specify the operations, or predicates or $\mathfrak{M}$, we may write $\mathfrak{M}=(M,\dots)$.
 \end{notation}
 
+%#
+%### SUBSECTION: Syntax: Vocabularies, terms, formulas, and sentences
+%#
 \subsection{Syntax: Vocabularies, terms, formulas, and sentences}
 
 In this section, we introduce the basic definitions of \emph{language} and \emph{theory} that are standard in logic and that will be used throughout the notes.
@@ -257,6 +271,9 @@ We emphasize terms and formulas are merely symbolic expressions.
 We are not assigning any meaning to them.
 This will be done in the next section through the concepts of \emph{interpretation}, \emph{satisfaction}, \emph{model}, and \emph{type}.
 
+%#
+%### SUBSECTION: Semantics: Interpretations, models, types, and elementary extensions
+%#
 \subsection{Semantics: Interpretations, models, types, and elementary extensions}
 \label{sec:semantics}
 
@@ -420,9 +437,15 @@ using different approaches.
   If every finite subset of $T$ is satisfiable, then $T$ is satisfiable.
 \end{theorem}
 
+%#
+%## SECTION: Topology
+%#
 \section{Topology}
 \label{sec:topology}
 
+%#
+%### SUBSECTION: Topological spaces
+%#
 \subsection{Topological spaces}
 
 \begin{definition}
@@ -721,6 +744,9 @@ For instance, examples (a) and (b) below generate the same topology on $\RR$.
   \end{enumerate}
 \end{example}
 
+%#
+%### SUBSECTION: Limits
+%#
 \subsection{Limits}
 
 We now transition to discuss the notion of limit in a topological space.
@@ -845,6 +871,9 @@ Although it is not needed for the material in these notes, it can be proved easi
   \]
 \end{notation}
 
+%#
+%### SUBSECTION: Principal ultrafilters
+%#
 \subsection{Principal ultrafilters}
 
 \begin{definition}
@@ -878,7 +907,8 @@ In model theory, one sees points as “packets” of information.
 The information carried by a point (with respect to a given theory $T$ of a vocabulary $V$) is called the \emph{type} of the point relative to $T$ (see \cref{def:type}).
 The information carried by types increases as the vocabulary $V$ is expanded to larger vocabularies;
 see example~\ref{exa:nonstandard-arithmetic}.
-The compactness theorem (see Theorem~\ref{thm:compactness} and Corollaries~\ref{cor:compactness-from-completeness-1}, and~\ref{cor:compactness-from-completeness-2}) states that spaces of types are topologically compact, i.e., closed under topological limits.
+The compactness theorem (see Theorem~\ref{thm:compactness} and Corollaries~\ref{cor:compactness-from-completeness-1}, and~\ref{cor:compactness-from-completeness-2})
+states that spaces of types are topologically compact, i.e., closed under topological limits.
 Soft points are limits of hard points.
 
 Spaces of types associated with a given theory $T$ are a measure of the “tameness" of $T$.
@@ -888,6 +918,9 @@ There are many degrees of tameness and wildness.%
 \footnote{See \text{https://forkinganddividing.com/} for the current “map of the universe”}.
 Their study is known as \emph{classification theory}.%
 
+%#
+%### SUBSECTION: Nonprincipal ultrafilters
+%#
 \subsection{Nonprincipal ultrafilters}
 
 \begin{proposition}
@@ -1025,6 +1058,9 @@ Now we want to improve \cref{prop:filter-generated-by-a-base} by showing that ev
   By \cref{prop:filter-generated-by-a-base} and \cref{cor:ultrafilter-theorem}.
 \end{proof}
 
+%#
+%### SUBSECTION: Topological compactness and concluding topological remarks
+%#
 \subsection{Topological compactness and concluding topological remarks}
 
 Let us prove that the converse of \cref{prop:hausdorff-implies-unique-limits} holds:
@@ -1142,8 +1178,14 @@ It is one of the most famous theorems in general topology.
   By~\ref{prop:heine-borel} and \ref{thm:tychonoff}.
 \end{proof}
 
+%#
+%## SECTION: First Steps in Model Theory
+%#
 \section{First Steps in Model Theory}
 
+%#
+%### SUBSECTION: Limits of structures and limits of theories: Restricted version of Łoś’ Theorem
+%#
 \subsection{Limits of structures and limits of theories: Restricted version of Łoś’ Theorem}
 
 The following theorem is a weak version of Jerzy Łoś’ Theorem~\cite{Los:1955}.
@@ -1169,6 +1211,9 @@ Thus, the space $X$ is compact (see \cref{def:compactness}).
 
 In this section, we shall explore various consequences of \cref{thm:los-thm}.
 
+%#
+%### SUBSECTION: Types and first applications
+%#
 \subsection{Types and first applications}
 \label{sec:types}
 
@@ -1570,6 +1615,9 @@ $\{0,1\}$ to more general truth values, say, $[0,1]$, then we will be able to vi
   This is radically simpler and more intuitive than the traditional $\varepsilon-\delta$ definition of continuity.
 \end{example}
 
+%#
+%### SUBSECTION: Obtaining the compactness theorem from the restricted version of Łoś’ theorem
+%#
 \subsection{Obtaining the compactness theorem from the restricted version of Łoś’ theorem}
 \label{sec:compactness-from-los}
 
@@ -1632,6 +1680,9 @@ In this subsection, we use the restricted versiom of Łoś’ theorem (\cref{thm
   (\cref{thm:los-thm}), was folklore in Tarski’s Berkeley group in the late 1950’s, and it first appeared in print in the early 1960’s in a paper about more general things~\cite{Frayne-Morel-Scott:1962}.
 \end{history}
 
+%#
+%### SUBSECTION: The Ultraproduct construction
+%#
 \subsection{The Ultraproduct construction}
 
 Fix an indexed family $(M_i)_{i\in I}$ of nonempty sets and a filter $\mathscr{U}$ on the index set $I$.
@@ -1760,6 +1811,9 @@ To ensure the consistency of the previous definition, we must check that the fol
   so $(\tilde{a}'_1,\dots,\tilde{a}'_n) \in \PP^\fM$.
 \end{proof}
 
+%#
+%### SUBSECTION: Full statement and proof of Łoś’ Theorem
+%#
 \subsection{Full statement and proof of Łoś’ Theorem}
 \label{sec:los-theorem}
 
@@ -1867,6 +1921,9 @@ The examples of ultraproducts presented in \cref{exa:nonstandard-arithmetic} and
   For a survey of applications of ultraproducts in mathematics, computer science, and information theory, see Tao’s blog and lecture at the Simon’s institute for the Theory of Computing~\cite{Tao:0000c}.
 \end{history}
 
+%#
+%### SUBSECTION: Applications of ultraproducts: Axiomatizability and finite axiomatizability
+%#
 \subsection{Applications of ultraproducts: Axiomatizability and finite axiomatizability}
 
 In this short section, we consider the following two problems:
@@ -1979,8 +2036,14 @@ Bringing \cref{thm:elementary-class} and \cref{lem:elementary-class} together, w
   Since then, they have been used widely to prove axiomatizability of classes of structures in algebra, analysis, probability and combinatorics.
 \end{history}
 
+%#
+%## SECTION: The Completeness of First-Order Logic
+%#
 \section{The Completeness of First-Order Logic}
 
+%#
+%### SUBSECTION: Defining the notion of logical consequence
+%#
 \subsection{Defining the notion of logical consequence}
 \label{sec:logical-consequence}
 
@@ -2041,6 +2104,9 @@ The Completeness Theorem of first-order logic (\cref{thm:completeness} below) an
 Of course, before proving this theorem, we need a formal definition of the concept of “proof”.
 This is the content of the next section.
 
+%#
+%### SUBSECTION: The mathematical definitions of “proof” and “theorem”
+%#
 \subsection{The mathematical definitions of “proof” and “theorem”}
 \label{sec:proof}
 
@@ -2159,6 +2225,9 @@ Gentzen is regarded as one of the great minds of logic in the 20th century.
 His \emph{cut-elimination theorem} is  considered as the cornerstone of proof-theoretic semantics.
 He died of starvation in a Soviet prison camp at the age of 35, following an arrest during the Prague Uprising against the occupying German forces in 1945, during the final stages of World War II.
 
+%#
+%### SUBSECTION: Statement of the Completeness Theorem
+%#
 \subsection{Statement of the Completeness Theorem}
 \label{sec:completeness-statement}
 
@@ -2204,6 +2273,9 @@ This type of result is called a \emph{model existence theorem}.
   For an account of topological and game-theoretic connection, see Hodges’ book~\cite{Hodges:1985}.
 \end{history}
 
+%#
+%### SUBSECTION: Proof of the Completeness Theorem: The Henkin model construction method
+%#
 \subsection{Proof of the Completeness Theorem: The Henkin model construction method}
 \label{sec:henkin-construction}
 
@@ -2517,6 +2589,9 @@ The Henkin method presented in this section can be adapted to prove model existe
 (in fact, historically, Henkin devised the method to prove completeness for $\omega$-logic, which is a type of infinitary logic).
 An advantage of this method is that, for a given logic  $\scrL$, the proof of the model existence gives a set of axioms needed to obtain a complete axiomatization of $\scrL$.
 
+%#
+%### SUBSECTION: Obtaining compactness from completeness
+%#
 \subsection{Obtaining compactness from completeness}
 
 In \cref{sec:compactness-from-los}, we provided a short proof of the compactness theorem using  ultraproducts and Łoś’ Theorem.
@@ -2551,6 +2626,9 @@ The compactness theorem can be restated as follows:
 
 Both versions of the compactness theorem stated above (namely, \cref{cor:compactness-from-completeness-1,cor:compactness-from-completeness-2}) are equally useful in applications.
 
+%#
+%### SUBSECTION: The size of models of a theory: Upward and Downward Löwenheim-Skolem theorems
+%#
 \subsection{The size of models of a theory: Upward and Downward Löwenheim-Skolem theorems}
 
 \begin{definition}
@@ -2633,6 +2711,9 @@ Essentially the same argument used to prove~\ref{cor:upward-l-s} above can be us
   hence, by compactness, $T'$ has a model.
 \end{proof}
 
+%#
+%### SUBSECTION: Lindström’s characterization of first-order logic
+%#
 \subsection{Lindström’s characterization of first-order logic}
 
 The following theorems are two of several characterizations of first-order logic proved by the Swedish logician Per Lindström.%
@@ -2648,6 +2729,9 @@ We will omit the proofs here, as they fall outside our goal.
   There is no logic that is strictly stronger than first-order logic and that has an enumerable set of tautologies and satisfies downward Löwenheim-Skolem theorem.
 \end{theorem}
 
+%#
+%## SECTION: Interpolation and definability
+%#
 \section{Interpolation and definability}
 
 It is often said that definability and undefinability are the core concepts of model theory.
@@ -2665,6 +2749,9 @@ The main results of this section are the following:
   Svenonius’ Theorem.
 \end{itemize}
 
+%#
+%### SUBSECTION: Interpolation and separation of classes: The Craig interpolation Theorem
+%#
 \subsection{Interpolation and separation of classes: The Craig interpolation Theorem}
 
 \begin{definition}
@@ -2877,6 +2964,9 @@ There are many refinements of the Craig interpolation theorem;
 some provide information about the syntactic structure  of the interpolant
 (the most famous of which is Lyndon’s interpolation theorem~\cite{Lyndon:1959}) and some extend the result infinitary and second-order logics (see, for example,~\cite{LopezEscobar:1965}, \cite{Malitz:1969}, \cite{Keisler:1971}, \cite{Chang:1971}).
 
+%#
+%### SUBSECTION: Definability: The Beth Definability Theorem
+%#
 \subsection{Definability: The Beth Definability Theorem}
 
 Throughout this section, $V$ will denote a fixed first-order vocabulary and $V\cup\{P\}$ will denote the vocabulary that results from expanding $V$ with a new $n$-ary predicate symbol $P$.
@@ -2987,6 +3077,9 @@ Then $P$ is explicitly definable in by the $V$-formula
   he obtained the Craig interpolation lemma as a corollary of his definability theorem~\cite{Beth:1953}.
 \end{history}
 
+%#
+%### SUBSECTION: Robinson’s Joint Consistency Theorem
+%#
 \subsection{Robinson’s Joint Consistency Theorem}
 
 \begin{definition}
@@ -3019,6 +3112,9 @@ Then $P$ is explicitly definable in by the $V$-formula
   he obtained the Craig interpolation Lemma and the Beth definability theorem as  corollaries of his joint consistency theorem theorem~\cite{Robinson:1956}.
 \end{history}
 
+%#
+%## SECTION: Elementary equivalence, elementary extensions, and elementary embeddings
+%#
 \section{Elementary equivalence, elementary extensions, and elementary embeddings}
 
 Recall that the \emph{complete theory} of a structure $\fM$, denoted $\Th(\fM)$, is the set of sentences that are satisfied by $\fM$.
@@ -3196,8 +3292,14 @@ The following theorem is called the “joint embedding property” of first-orde
   In either case, the proof is straightforward.
 \end{proof}
 
+%#
+%## SECTION: Types, saturated structures and homogeneous structures
+%#
 \section{Types, saturated structures and homogeneous structures}
 
+%#
+%### SUBSECTION: Some notational simplifications
+%#
 \subsection{Some notational simplifications}
 
 In the next sections, the concept of \emph{type} will play a central role.
@@ -3212,6 +3314,9 @@ By an abuse of notation, for $a\in A$, we denote the name of $a$ in $V(A)$ also 
 We sometimes identify a structure $M$ with $M^n$,  integer $n<\omega$;
 for instance, for an $n$-tuple $\bar{a}=a_1,\dots, a_n$ of elements of $M$, we may write $\bar{a}\in M$ instead of $\bar{a}\in M^n$.
 
+%#
+%### SUBSECTION: Averages of types
+%#
 \subsection{Averages of types}
 
 Throughout this section, we will have the following fixed background:
@@ -3388,6 +3493,9 @@ We can summarize \cref{thm:averages-are-realized,thm:elements-are-averages} as f
 
 Note that elements of $M$ realize averages given by principal ultrafilters, while the elements of elementary extensions of $M$ that are not in $M$ realize averages given by nonprincipal ultrafilters.
 
+%#
+%### SUBSECTION: Saturated and universal structures: A gentle introduction
+%#
 \subsection{Saturated and universal structures: A gentle introduction}
 
 It was observed in the previous section that every structure $M$ has an elementary extension $M^*$ such that $\scrU$-averages (or equivalently $\scrU$-limits) of $I$-indexed families of types of $n$-tuples in $M$ over $M$ are realized in $M^*$.
@@ -3632,6 +3740,9 @@ There is another strong property of monster models that we are interested in:
 $\lambda$-\emph{homogeneity}.
 This will be the topic the next section.
 
+%#
+%### SUBSECTION: Homogeneous structures and uniqueness of saturated structures
+%#
 \subsection{Homogeneous structures and uniqueness of saturated structures}
 
 The main resuts of this section are Theorems~\ref{thm:saturation-and-homogeneity} and~\ref{thm:uniqueness-of-saturated-structures}.
@@ -3796,8 +3907,14 @@ The proof of this theorem follows the \emph{back-and-forth} method used by Canto
   This means that the map $a'_\eta\mapsto b'_\eta$ is an isomorphism.
 \end{proof}
 
+%#
+%## SECTION: Infinitary Logic and Forcing
+%#
 \section{Infinitary Logic and Forcing}
 
+%#
+%### SUBSECTION: Infinitary logic
+%#
 \subsection{Infinitary logic}
 
 Let $V$ be a countable vocabulary with first-order language $L=L_V$.
@@ -3881,6 +3998,9 @@ Henceforth, we will have the following fixed background:
   $L_\Psi(C)$ is the set of all formulas obtained by formulas in $L_\Psi$ by replacing finitely many free variables by constants in $C$.
 \end{itemize}
 
+%#
+%### SUBSECTION: Forcing Properties
+%#
 \subsection{Forcing Properties}
 
 \begin{definition}
@@ -4091,6 +4211,9 @@ Fix an arbitrary forcing property $\scrP = \langle P, \le, f \rangle$ for $L$.
 
 \end{proof}
 
+%#
+%### SUBSECTION: Generic sets and the Generic Model Theorem
+%#
 \subsection{Generic sets and the Generic Model Theorem}
 
 Fix an arbitrary forcing property $\scrP = \langle P, \le, f \rangle$ for $L$.
@@ -4336,6 +4459,9 @@ The Generic Model Theorem is an immediate consequence of the following two lemma
 
 \end{proof}
 
+%#
+%### SUBSECTION: The omitting of types theorem
+%#
 \subsection{The omitting of types theorem}
 
 \begin{definition}
@@ -5954,6 +6080,9 @@ It can be readily verified, using the saturation of the monster model, that $d$ 
 
 \end{comment}
 
+%#
+%## SECTION: Logical Structures in Quantum Foundations
+%#
 \section{Logical Structures in Quantum Foundations}
 
 In this section, we connect logic and quantum foundations.
@@ -5984,6 +6113,9 @@ We start the section with an introduction to the concept of \emph{partial algebr
   Kochen and Specker conclude that this gives a negative answer to the Einstein-Podolski-Rosen problem on hidden variables in quantum mechanics.
 \end{history}
 
+%#
+%### SUBSECTION: Introduction to partial algebras
+%#
 \subsection{Introduction to partial algebras}
 
 In this subsection, we introduce the class of structures that are at the core of the famous Kochen-Specker theorem, namely, the class of \emph{partial algebras}.
@@ -6029,7 +6161,8 @@ In this subsection, we introduce the class of structures that are at the core of
 
 The rest of this section will be devoted to presenting a class of natural examples of partial algebras.
 Even though the concept of partial algebra came from operator algebras and observables in quantum theory, our basic examples will be based on graphs;
-more specifically, we shall define a class of graphs that we will call \emph{triangular graphs} (see Example~\ref{exa:triangular-graphs} below), which will lead to a natural notion of \emph{observable} for such graphs (Definition~\ref{def:graph-observables}).
+more specifically, we shall define a class of graphs that we will call \emph{triangular graphs}
+(see Example~\ref{exa:triangular-graphs} below), which will lead to a natural notion of \emph{observable} for such graphs (Definition~\ref{def:graph-observables}).
 
 \begin{remark}
   The concepts of triangular graph and their “observables" defined below do not have a direct physical interpretation or application.
@@ -6506,6 +6639,9 @@ We will now show that any three pairwise commeasurable observables $q_1,q_2,q_3\
 
 \end{proof}
 
+%#
+%### SUBSECTION: Polynomials in partial algebras
+%#
 \subsection{Polynomials in partial algebras}
 
 In this section, we define the notion of a “polynomial” and extend the idea to apply to partial algebras. We will use $P_n$ (for some $n\in\NN$) to denote the set of formal expressions using the symbols $\circone,x_1,x_2,\ldots,x_n$, a symbol for each real number (for which we use the letters $\lambda,\mu$, etc), the symbols $\oplus,\otimes,\odot$, parenthesis $(,),[,]$, etc (for clarity) that result from applying  the following rules of formation finitely many times:
@@ -6762,6 +6898,9 @@ Now we define a notion of when two expressions in $P_n$ are equal in a partial a
   \end{enumerate}
 \end{examples}
 
+%#
+%### SUBSECTION: Partial Boolean algebras
+%#
 \subsection{Partial Boolean algebras}
 \begin{definition}\label{def:partial-boolean-algebra}
   A \emph{partial Boolean algebra} (over the real numbers $\RR$) is a structure $\fB = (B, \com, \lor, \neg,\mathbb{0}, \mathbb{1})$, where
@@ -6960,6 +7099,9 @@ We present two more examples of partial Boolean algebras.
   \end{enumerate}
 \end{examples}
 
+%#
+%### SUBSECTION: Q-Logic vs C-Logic
+%#
 \subsection{Q-Logic vs C-Logic}
 
 \bibliographystyle{amsalpha}
