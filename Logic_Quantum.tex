@@ -1615,14 +1615,14 @@ The \emph{reduced product} of $(\FM_i)_{i\in I}$ over $\mathscr{U}$, denoted $\F
 For each $n$-ary function symbol $\mathbb{f}$ in $V$, define an $n$-ary operation $\mathbb{f}^\FM \colon M^n\to M$ by:
 \[
 \mathbb{f}^\mathscr{\mathfrak{M}}(\tilde{a}_1, \dots, \tilde{a}_n)=\tilde{b}
-\quad\Leftrightarrow\quad
+\quad\text{if and only if}\quad
 \{i\in I \colon \mathbb{f}^{\FM_i}(a_1(i), \dots, a_n(i))=b(i))\}\in \mathscr{U}.
 \]
 
 \item For each $n$-ary predicate symbol $\mathbb{P}$ in $V$, define an $n$-ary relation $\mathbb{P}^\FM$ on $M$ by:
 \[
 (\tilde{a}_1, \dots, \tilde{a}_n) \in \mathbb{P}^{\FM}
-\quad\Leftrightarrow\quad
+\quad\text{if and only if}\quad
 \{i \in I\colon 
 (a_1(i), \dots, a_n(i)) \in \mathbb{P}^{\FM_i}
 \}\in \SU.
@@ -1685,7 +1685,7 @@ denote the natural projection of the universe $M$ of $\FM$ onto the universe $M_
 \[
 \tag{Ł}
 \mathfrak{M}\models \phi[a_1, \dots, a_n]
-\quad\Leftrightarrow\quad
+\quad\text{if and only if}\quad
 \{i\in I \colon \mathfrak{M}_i\models \phi[\pi_i(a_1), \dots, \pi_i(a_n)]\,\}\in \mathscr{U}.
 \]
 \end{theorem}
@@ -2277,16 +2277,16 @@ To show that for any sentence $\phi\in L_V$,
 \]
 we proceed by induction on the complexity of sentences. Assume that ($*$) holds for sentences $\phi,\psi\in L_V$. Then,
 \begin{align*}
-\FM \models \neg\phi \quad & \Leftrightarrow \quad \FM \not \models \phi &&\text{By definition of $\vdash$}\\
-&\Leftrightarrow \quad \phi \not \in T &&\text{By induction hypothesis}\\
-&\Leftrightarrow \quad  \neg\phi\in T &&\text{Since $T$ is maximal}
+\FM \models \neg\phi \quad & \text{if and only if} \quad \FM \not \models \phi &&\text{By definition of $\vdash$}\\
+&\text{if and only if} \quad \phi \not \in T &&\text{By induction hypothesis}\\
+&\text{if and only if} \quad  \neg\phi\in T &&\text{Since $T$ is maximal}
 \end{align*}
 
 
 \begin{align*}
-\FM \models \phi \wedge \psi \quad & \Leftrightarrow \quad \FM\models \phi \text{ and } \FM \models \psi &&\text{By definition of $\vdash$}\\
-&\Leftrightarrow \quad  \phi\in T \text{ and } \psi\in T  &&\text{By induction hypothesis}\\
-&\Leftrightarrow \quad  \phi\wedge\psi\in T   &&\text{Since $T$ is maximal}
+\FM \models \phi \wedge \psi \quad & \text{if and only if} \quad \FM\models \phi \text{ and } \FM \models \psi &&\text{By definition of $\vdash$}\\
+&\text{if and only if} \quad  \phi\in T \text{ and } \psi\in T  &&\text{By induction hypothesis}\\
+&\text{if and only if} \quad  \phi\wedge\psi\in T   &&\text{Since $T$ is maximal}
 \end{align*}
 
 Suppose $\phi$ is $(\exists x)\psi$.
@@ -3003,7 +3003,7 @@ Let $(\bar{c}_i)_{i\in I}$ be a family of elements of $M^n$. If $\SU$ is an ultr
 is the set of formulas in the free variables $\bar x$ defined as follows: For every $V$-formula $\phi(\bar x, \bar y)\in\Phi$ and each tuple $\bar a\in A$ of the same length as $\bar y$, 
 \[
 \phi(\bar x,\bar a)\in \Av_{\SU}  (\Phi\tp_A(\bar c_i))_{i\in I}
-\quad\Leftrightarrow\quad
+\quad\text{if and only if}\quad
 \{i\in I \colon \phi(\bar x,\bar a) \in \Phi\tp_A(\bar c_i)  \}\in \SU.
 \]
 If $A=M$ and $\Phi$ is the set of all $V$-formulas, then 
@@ -3717,9 +3717,9 @@ If $\phi$ is $\bigvee \Phi$ where $\Phi \subseteq L_\Psi(C)$ is a countable set 
 \begin{proof}[Proof of ii)]
 
 \begin{align*}
-p\Vdash^w \phi \quad &\iff \quad  p\Vdash \neg \neg \phi \\
-&\iff \quad \text{for all } q\ge p \text{, we have } q \not \Vdash\neg \phi \\
-&\iff \quad \text{for all } q\ge p \text{, we have there exists } r\ge q \text{ such that } r\Vdash \phi.
+p\Vdash^w \phi \quad &\text{if and only if} \quad  p\Vdash \neg \neg \phi \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{, we have } q \not \Vdash\neg \phi \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{, we have there exists } r\ge q \text{ such that } r\Vdash \phi.
 \end{align*}
 
 \end{proof}
@@ -3740,10 +3740,10 @@ The right-to-left direction is given by iv). Assume $p\Vdash^w \neg \phi$ and, o
 \begin{proof}[Proof of vi)]
 
 \begin{align*}
-p\Vdash \forall x \phi(x) \quad &\iff \quad  p\Vdash \neg (\exists x \neg \phi(x)) \\
-&\iff \quad \text{for all } q\ge p \text{, we have } q \not \Vdash \exists x \neg \phi(x) \\
-&\iff \quad \text{for all } q\ge p \text{ and } c\in C \text{, we have } q\not \Vdash \neg \phi(c) \\
-&\iff \quad \text{for all } q\ge p \text{ and } c\in C \text{, there exists } r\ge q \text{ such that } r\Vdash \phi(c).
+p\Vdash \forall x \phi(x) \quad &\text{if and only if} \quad  p\Vdash \neg (\exists x \neg \phi(x)) \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{, we have } q \not \Vdash \exists x \neg \phi(x) \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{ and } c\in C \text{, we have } q\not \Vdash \neg \phi(c) \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{ and } c\in C \text{, there exists } r\ge q \text{ such that } r\Vdash \phi(c).
 \end{align*}
 
 \end{proof}
@@ -3751,11 +3751,11 @@ p\Vdash \forall x \phi(x) \quad &\iff \quad  p\Vdash \neg (\exists x \neg \phi(x
 \begin{proof}[Proof of vii)]
 
 \begin{align*}
-p\Vdash \bigwedge \Phi   \quad &\iff \quad  p\Vdash \neg (\bigvee \Gamma) \text{ where } \Gamma = \{ \neg\phi \colon \phi\in \Phi \} \\
-&\iff \quad \text{for all } q\ge p \text{, we have } q \not \Vdash \bigvee \Gamma \\
-&\iff \quad \text{for all } q\ge p \text{ and } \psi\in \Gamma \text{, we have } q\not \Vdash \psi \\
-&\iff \quad \text{for all } q\ge p \text{ and } \phi\in \Phi \text{, we have } q\not \Vdash \neg\phi \\
-&\iff \quad \text{for all } q\ge p \text{ and } \phi\in \Phi \text{, there exists } r\ge q \text{ such that } r\Vdash \phi.
+p\Vdash \bigwedge \Phi   \quad &\text{if and only if} \quad  p\Vdash \neg (\bigvee \Gamma) \text{ where } \Gamma = \{ \neg\phi \colon \phi\in \Phi \} \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{, we have } q \not \Vdash \bigvee \Gamma \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{ and } \psi\in \Gamma \text{, we have } q\not \Vdash \psi \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{ and } \phi\in \Phi \text{, we have } q\not \Vdash \neg\phi \\
+&\text{if and only if} \quad \text{for all } q\ge p \text{ and } \phi\in \Phi \text{, there exists } r\ge q \text{ such that } r\Vdash \phi.
 \end{align*}
 
 \end{proof}
@@ -3976,23 +3976,23 @@ M \models \phi \quad \text{if and only if} \quad \phi\in T\text{,} \tag{$*$}
 we proceed by induction on the complexity of $\phi$. Assume that ($*$) holds for sentences $\phi,\psi\in L_\Psi(C)$. Then,
 
 \begin{align*}
-M \models \neg\phi \quad & \Leftrightarrow \quad M \not \models \phi &&\text{By definition of $\models$}\\
-&\Leftrightarrow \quad \phi \not \in T &&\text{By induction hypothesis}\\
-&\Leftrightarrow \quad  \neg\phi\in T &&\text{By property iv) of $T$}.
+M \models \neg\phi \quad & \text{if and only if} \quad M \not \models \phi &&\text{By definition of $\models$}\\
+&\text{if and only if} \quad \phi \not \in T &&\text{By induction hypothesis}\\
+&\text{if and only if} \quad  \neg\phi\in T &&\text{By property iv) of $T$}.
 \end{align*}
 
 
 \begin{align*}
-M \models (\exists x)\phi \quad & \Leftrightarrow \quad M \models \phi[\tilde{c}] \text{ for some } \tilde{c}\in M   &&\text{By definition of $\models$}\\
-&\Leftrightarrow \quad M\models \phi(c) &&\text{By definition of $\models$}\\
-&\Leftrightarrow \quad \phi(c) \in T &&\text{By induction hypothesis}\\
-&\Leftrightarrow \quad  (\exists x)\phi \in T &&\text{By property v) of $T$}.
+M \models (\exists x)\phi \quad & \text{if and only if} \quad M \models \phi[\tilde{c}] \text{ for some } \tilde{c}\in M   &&\text{By definition of $\models$}\\
+&\text{if and only if} \quad M\models \phi(c) &&\text{By definition of $\models$}\\
+&\text{if and only if} \quad \phi(c) \in T &&\text{By induction hypothesis}\\
+&\text{if and only if} \quad  (\exists x)\phi \in T &&\text{By property v) of $T$}.
 \end{align*}
 
 \begin{align*}
-M \models \bigvee \Phi \quad & \Leftrightarrow \quad M \models \phi \text{ for some } \phi\in \Phi &&\text{By definition of $\models$}\\
-&\Leftrightarrow \quad  \phi\in T  &&\text{By induction hypothesis}\\
-&\Leftrightarrow \quad  \bigvee \Phi \in T   &&\text{By property vi) of $T$}.
+M \models \bigvee \Phi \quad & \text{if and only if} \quad M \models \phi \text{ for some } \phi\in \Phi &&\text{By definition of $\models$}\\
+&\text{if and only if} \quad  \phi\in T  &&\text{By induction hypothesis}\\
+&\text{if and only if} \quad  \bigvee \Phi \in T   &&\text{By property vi) of $T$}.
 \end{align*}
 
 \end{proof}
@@ -4742,14 +4742,14 @@ A \emph{complete $V$-theory} is the complete $V$-theory of any $V$-structure~$\F
 		\item
 		Two $V$-structures $\FM,\FN$ are \emph{elementarily equivalent}, written $\FM\equiv\FN$, if they have the same complete theory, i.e., if
 		\[
-			\FM\appmod\varphi \quad\Leftrightarrow\quad\FN\appmod\varphi,\qquad
+			\FM\appmod\varphi \quad\text{if and only if}\quad\FN\appmod\varphi,\qquad
 \text{for every $V$-sentence $\varphi$.}
 		\]
 		
 		\item
 		 If $\FM$ and $\FN$ are  $V$-structures and  $\FM$ is a substructure of $\FN$, we say that $\FM$ is an \emph{elementary substructure} of $\FN$, and we write $\FM\prec\FN$, if whenever $a_1,\dots, a_n$ are elements of $\FM$ and $\varphi(x_1,\dots, x_n)$ is a $V$-formula such that $a_i$ is of the same sort as $x_i$, for $i=1,\dots, n$, we have
 		\[
-		\FM\appmod\varphi[a_1,\dots, a_n] \quad\Leftrightarrow\quad\FN\appmod\varphi[a_1,\dots, a_n].
+		\FM\appmod\varphi[a_1,\dots, a_n] \quad\text{if and only if}\quad\FN\appmod\varphi[a_1,\dots, a_n].
 		\]
 	\end{enumerate}
 \end{definition}
@@ -4998,7 +4998,7 @@ If $A$ consists of all the elements of $\FM$, we write $(\FM, a \mid a\in A)$ as
 	Let $\FM$ and $\FN$ be $V$-structures. 
 An \emph{elementary embedding}  of $\FM$ into $\FN$ is a map $e$ that assigns to each element $a$ of $\FM$ an element $e(a)$ of $\FN$ such that, whenever $a_1,\dots, a_n$ are elements of $\FM$ and $\varphi(x_1,\dots, x_n)$ is a $V$-formula such that $a_i$ is of the same sort as $x_i$, for $i=1,\dots, n$, we have
 	\[
-	\FM\appmod\varphi[a_1\dots, a_n] \quad\Leftrightarrow\quad\FN\appmod\varphi[e(a_1)\dots, e(a_n)].
+	\FM\appmod\varphi[a_1\dots, a_n] \quad\text{if and only if}\quad\FN\appmod\varphi[e(a_1)\dots, e(a_n)].
 	\]
 \end{definition}
 
@@ -5221,7 +5221,7 @@ Thus, in the case when $(a_i)_{i<\alpha}$ lists all the elements of $\FN$, the m
 If $\FM$ is an $\aleph_1$-saturated $V$-structure, then $\appmod$ and $\models$ coincide on $\FM$, i.e., for a $V$-formula $\varphi(x_1,\dots, x_n)$ and elements $a_1,\dots, a_n$ of suitable sorts, we have
 \[
 \FM\appmod \varphi[a_1,\dots, a_n]
-\quad\Leftrightarrow\quad
+\quad\text{if and only if}\quad
 \FM\models \varphi[a_1,\dots, a_n].
 \]
 \end{proposition}
